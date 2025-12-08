@@ -1,83 +1,46 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Login Hochzeit</title>
-  <meta name="robots" content="noindex, nofollow" />
-  <link href="https://fonts.googleapis.com/css2?family=Petit+Formal+Script&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css" />
-  <style>
-    body {
-      background: #FFF9C4;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      font-family: 'Playfair Display', serif;
-      margin: 0;
-    }
-    .login-box {
-      background: #FFFFF0;
-      padding: 2rem;
-      border-radius: 12px;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-      text-align: center;
-      width: 320px;
-    }
-    input {
-      width: 100%;
-      padding: 12px;
-      margin: 15px 0;
-      font-size: 16px;
-      border: 1px solid #A3B18A;
-      border-radius: 6px;
-    }
-    button {
-      background: #FBE846;
-      border: none;
-      padding: 12px 0;
-      width: 100%;
-      font-weight: bold;
-      cursor: pointer;
-      transition: 0.3s;
-      color: #000;
-      border-radius: 6px;
-      font-size: 18px;
-    }
-    button:hover {
-      background: #D4AF37;
-      color: #FFFFF0;
-    }
-    .error-msg {
-      color: red;
-      height: 1.2em;
-      margin-top: 10px;
-      font-weight: 700;
-    }
-  </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Eliza & Tom – Unsere Hochzeit</title>
+  <meta name="robots" content="noindex, nofollow">
+  <link href="https://fonts.googleapis.com/css2?family=Petit+Formal+Script&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="login-box">
-    <h2>Willkommen zu unserer Hochzeit</h2>
-    <p>Bitte gib das Passwort ein:</p>
-    <input type="password" id="passwordInput" placeholder="Passwort eingeben" />
-    <button onclick="checkPassword()">Login</button>
-    <div class="error-msg" id="error"></div>
+
+<!-- Passwortschutz (einfaches JS-Popup) -->
+<script>
+  const password = "EuerPasswort"; // <-- hier Passwort eintragen
+  let userPass = prompt("Bitte Passwort eingeben:");
+  if(userPass !== password){
+    alert("Falsches Passwort. Zugriff verweigert.");
+    window.location.href = "about:blank";
+  }
+</script>
+
+<header class="hero-header">
+  <div class="overlay">
+    <h1>Eliza &amp; Tom</h1>
+    <p class="hochzeitsdatum">12. Juli 2025</p>
+  </div>
+</header>
+
+<main class="container">
+  <div class="symbol" aria-hidden="true">
+    <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M32 12C20 28 10 40 10 50H54C54 40 44 28 32 12Z" stroke="#D4AF37" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
   </div>
 
-  <script>
-    function checkPassword() {
-      const input = document.getElementById('passwordInput').value;
-      const pw = 'gladan2025'; // <--- Passwort hier ändern
+  <h2>Für jetzt und für immer!</h2>
+  <p>Wir freuen uns, diesen besonderen Tag mit euch zu feiern.</p>
+  <hr>
+  <p>Einladung zur Hochzeit von Eliza &amp; Tom am 12. Juli 2025 im Schlossgarten Musterstadt.</p>
 
-      if (input === pw) {
-        window.location.href = 'home.html';
-      } else {
-        document.getElementById('error').textContent = 'Falsches Passwort. Bitte versuche es erneut.';
-      }
-    }
-  </script>
+  <a href="rsvp.html" class="rsvp-button">Zu- oder Absagen</a>
+</main>
+
 </body>
 </html>
-
