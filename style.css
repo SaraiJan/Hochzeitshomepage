@@ -1,10 +1,12 @@
+/* --- Grundlegendes Styling für die ganze Seite --- */
 body {
   font-family: 'Playfair Display', serif;
   margin: 0;
-  background: #FFF9C4;
+  background: #FFF9C4; /* Seitenhintergrund links/rechts */
   color: #000000;
 }
 
+/* Container mit weißem Hintergrund (#FFFFF0) und Schatten */
 .container {
   max-width: 700px;
   margin: 40px auto 80px;
@@ -16,11 +18,12 @@ body {
   color: #000000;
 }
 
+/* --- Header-Bildbereich --- */
 header.hero-header {
   position: relative;
   width: 100%;
   height: 80vh;
-  background-image: url('images/header.jpg'); /* Bild in images/ hochladen! */
+  background-image: url('images/header.jpg'); /* Pfad zum Headerbild */
   background-size: cover;
   background-position: center;
   display: flex;
@@ -30,12 +33,14 @@ header.hero-header {
   color: white;
 }
 
+/* Dunkles Overlay für besseren Kontrast */
 .hero-header .overlay {
   background-color: rgba(0,0,0,0.3);
   padding: 0 20px;
   width: 100%;
 }
 
+/* Überschrift im Header */
 .hero-header h1 {
   font-size: 4rem;
   font-weight: 700;
@@ -45,6 +50,7 @@ header.hero-header {
   text-shadow: 1px 1px 5px rgba(0,0,0,0.7);
 }
 
+/* Datum im Header */
 .hochzeitsdatum {
   font-family: 'Petit Formal Script', cursive;
   font-size: 2.5rem;
@@ -53,11 +59,13 @@ header.hero-header {
   text-shadow: 1px 1px 4px rgba(0,0,0,0.7);
 }
 
+/* Symbol unter dem Header */
 .symbol {
   margin-bottom: 1rem;
   filter: drop-shadow(0 0 1px #D4AF37);
 }
 
+/* Überschriften im Container */
 .container h2 {
   font-weight: 700;
   font-size: 2rem;
@@ -65,6 +73,7 @@ header.hero-header {
   margin-bottom: 0.5rem;
 }
 
+/* Trennlinie */
 hr {
   border: none;
   border-top: 2px solid #D4AF37;
@@ -72,10 +81,105 @@ hr {
   margin: 1.5rem auto;
 }
 
+/* Textabsätze */
 .container p {
   font-size: 1.1rem;
   line-height: 1.6;
   margin-top: 0;
   margin-bottom: 1.2rem;
   color: #333;
+}
+
+/* --- Styling Login-Seite --- */
+.login-box {
+  background: #FFFFF0;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  text-align: center;
+  width: 320px;
+  font-family: 'Playfair Display', serif;
+}
+
+.login-box input {
+  width: 100%;
+  padding: 12px;
+  margin: 15px 0;
+  font-size: 16px;
+  border: 1px solid #A3B18A;
+  border-radius: 6px;
+}
+
+.login-box button {
+  background: #FBE846;
+  border: none;
+  padding: 12px 0;
+  width: 100%;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+  color: #000;
+  border-radius: 6px;
+  font-size: 18px;
+}
+
+.login-box button:hover {
+  background: #D4AF37;
+  color: #FFFFF0;
+}
+
+.error-msg {
+  color: red;
+  height: 1.2em;
+  margin-top: 10px;
+  font-weight: 700;
+}
+
+/* --- RSVP Formular --- */
+form {
+  max-width: 400px;
+  margin: 0 auto;
+  text-align: left;
+  font-family: 'Playfair Display', serif;
+}
+
+form label {
+  font-weight: 700;
+  margin-bottom: 5px;
+  display: block;
+  color: #333;
+}
+
+form input[type="text"],
+form input[type="number"],
+form textarea {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #A3B18A;
+  border-radius: 5px;
+  font-family: 'Playfair Display', serif;
+  font-size: 1rem;
+  box-sizing: border-box;
+}
+
+form input[type="radio"] {
+  margin-right: 8px;
+}
+
+form button[type="submit"] {
+  background: #FBE846;
+  border: none;
+  padding: 12px 0;
+  width: 100%;
+  font-weight: bold;
+  cursor: pointer;
+  color: #000;
+  border-radius: 6px;
+  font-size: 18px;
+  transition: background 0.3s;
+}
+
+form button[type="submit"]:hover {
+  background: #D4AF37;
+  color: #FFFFF0;
 }
