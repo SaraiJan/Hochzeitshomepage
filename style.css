@@ -1,24 +1,25 @@
 /* Allgemein */
 body {
-    font-family: "Helvetica Neue", Arial, sans-serif;
+    font-family: 'Playfair Display', serif;
     margin: 0;
-    background: #F5F1E6; /* helles Beige als Hintergrund */
+    background: #F5F1E6; /* helles Beige */
     color: #333;
 }
 
 /* Header */
 header {
     background: #D4AF37; /* Gold */
-    color: #FFFFF0;      /* fast Weiß für Text */
+    color: #FFFFF0;      /* fast Weiß */
     padding: 20px;
     text-align: center;
     font-size: 32px;
+    font-weight: 700;    /* dick */
     letter-spacing: 1px;
 }
 
 /* Navigation */
 nav {
-    background: #FFFFF0; /* fast Weiß */
+    background: #FFFFF0;
     padding: 15px;
     display: flex;
     justify-content: center;
@@ -28,13 +29,28 @@ nav {
 
 nav a {
     text-decoration: none;
-    color: #A3B18A; /* Grün für Links */
-    font-weight: bold;
+    color: #A3B18A;
+    font-weight: 700;
     font-size: 18px;
 }
 
 nav a:hover {
-    color: #FBE846; /* leuchtendes Gelb beim Hover */
+    color: #FBE846;
+}
+
+/* Überschriften */
+h1, h2 {
+    font-weight: 700; /* dick */
+    color: #D4AF37;
+}
+
+/* Hochzeit Datum */
+.hochzeitsdatum {
+    font-family: 'Petit Formal Script', cursive;
+    font-size: 36px;
+    color: #FBE846;
+    text-align: center;
+    margin: 20px 0;
 }
 
 /* Container */
@@ -44,25 +60,20 @@ nav a:hover {
     padding: 0 20px;
 }
 
-/* Überschriften */
-h1, h2 {
-    color: #D4AF37; /* Gold */
-}
-
 /* Buttons, Inputs, Selects, Textarea */
 button, input, select, textarea {
     padding: 12px;
     width: 100%;
     margin: 10px 0;
     font-size: 16px;
-    border: 1px solid #A3B18A; /* grüne Akzente */
+    border: 1px solid #A3B18A;
     border-radius: 6px;
 }
 
 /* Buttons */
 button {
-    background: #FBE846; /* leuchtendes Gelb */
-    color: #333;          /* dunkler Text */
+    background: #FBE846;
+    color: #333;
     border: none;
     cursor: pointer;
     font-weight: bold;
@@ -70,13 +81,13 @@ button {
 }
 
 button:hover {
-    background: #D4AF37; /* gold beim Hover */
+    background: #D4AF37;
     color: #FFFFF0;
 }
 
 /* Formularkarten */
 .form-card {
-    background: #FFFFF0; /* fast Weiß */
+    background: #FFFFF0;
     padding: 25px;
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.05);
