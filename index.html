@@ -2,47 +2,33 @@
 <html lang="de">
 <head>
     <meta charset="UTF-8">
+    <meta name="robots" content="noindex, nofollow">
     <title>Hochzeit – Login</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            max-width: 400px;
-            margin: 80px auto;
-            text-align: center;
-        }
-        input {
-            padding: 10px;
-            margin: 10px;
-            width: 80%;
-            font-size: 16px;
-        }
-        button {
-            padding: 10px 20px;
-            font-size: 16px;
-            cursor: pointer;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h2>Willkommen zu unserer Hochzeit!</h2>
-    <p>Bitte Passwort eingeben:</p>
+<div class="container">
+    <h2>Willkommen zu unserer Hochzeit</h2>
+    <p>Bitte gib das Passwort ein:</p>
 
     <input type="password" id="passwordInput" placeholder="Passwort">
     <button onclick="checkPassword()">Login</button>
 
     <p id="error" style="color:red;"></p>
+</div>
 
-    <script>
-        function checkPassword() {
-            const password = document.getElementById("passwordInput").value;
-            const correctPassword = "zauvijek"; // <<< ändere dieses Passwort!
+<script>
+    function checkPassword() {
+        const password = document.getElementById("passwordInput").value;
+        const correctPassword = "meinPasswort";  <!-- HIER ändern -->
 
-            if (password === correctPassword) {
-                window.location.href = "home.html"; // Weiterleitung zur Hauptseite
-            } else {
-                document.getElementById("error").textContent = "Falsches Passwort.";
-            }
+        if (password === correctPassword) {
+            window.location.href = "home.html";
+        } else {
+            document.getElementById("error").textContent = "Falsches Passwort.";
         }
-    </script>
+    }
+</script>
+
 </body>
 </html>
