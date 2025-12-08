@@ -1,25 +1,25 @@
-/* Allgemein */
+/* Body */
 body {
     font-family: 'Playfair Display', serif;
     margin: 0;
-    background: #F5F1E6; /* helles Beige */
-    color: #333;
+    background: #FFF9C4; /* helles Gelb am Rand */
+    color: #000000;       /* schwarze Schrift */
 }
 
 /* Header */
 header {
     background: #D4AF37; /* Gold */
-    color: #FFFFF0;      /* fast Weiß */
+    color: #000000;       /* schwarzer Text */
     padding: 20px;
     text-align: center;
     font-size: 32px;
-    font-weight: 700;    /* dick */
+    font-weight: 700;
     letter-spacing: 1px;
 }
 
 /* Navigation */
 nav {
-    background: #FFFFF0;
+    background: #FFFFF0; /* fast Weiß */
     padding: 15px;
     display: flex;
     justify-content: center;
@@ -29,19 +29,19 @@ nav {
 
 nav a {
     text-decoration: none;
-    color: #A3B18A;
+    color: #A3B18A; /* grün */
     font-weight: 700;
     font-size: 18px;
 }
 
 nav a:hover {
-    color: #FBE846;
+    color: #FBE846; /* leuchtendes Gelb beim Hover */
 }
 
 /* Überschriften */
 h1, h2 {
-    font-weight: 700; /* dick */
-    color: #D4AF37;
+    font-weight: 700;
+    color: #D4AF37; /* Gold */
 }
 
 /* Hochzeit Datum */
@@ -57,7 +57,9 @@ h1, h2 {
 .container {
     max-width: 800px;
     margin: 40px auto;
-    padding: 0 20px;
+    padding: 20px;
+    background: #FFFFF0; /* heller Container-Hintergrund, innerhalb der gelben Ränder */
+    border-radius: 8px;
 }
 
 /* Buttons, Inputs, Selects, Textarea */
@@ -73,7 +75,7 @@ button, input, select, textarea {
 /* Buttons */
 button {
     background: #FBE846;
-    color: #333;
+    color: #000000; /* schwarzer Text */
     border: none;
     cursor: pointer;
     font-weight: bold;
