@@ -2,8 +2,18 @@
 body {
     font-family: 'Playfair Display', serif;
     margin: 0;
-    background: #FFF9C4; /* helles Gelb am Rand */
+    background: #FFF9C4; /* gelber Rand */
     color: #000000;       /* schwarze Schrift */
+}
+
+/* Container */
+.container {
+    max-width: calc(100% - 10cm); /* links + rechts je 5 cm */
+    margin: 40px auto;
+    padding: 20px;
+    background: #FFFFFF; /* weißer Hauptbereich */
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
 }
 
 /* Header */
@@ -19,7 +29,7 @@ header {
 
 /* Navigation */
 nav {
-    background: #FFFFF0; /* fast Weiß */
+    background: #FFFFF0; /* helle Navigation */
     padding: 15px;
     display: flex;
     justify-content: center;
@@ -35,13 +45,13 @@ nav a {
 }
 
 nav a:hover {
-    color: #FBE846; /* leuchtendes Gelb beim Hover */
+    color: #FBE846; /* gelb */
 }
 
 /* Überschriften */
 h1, h2 {
-    font-weight: 700;
-    color: #D4AF37; /* Gold */
+    font-weight: 700; /* fett */
+    color: #D4AF37;
 }
 
 /* Hochzeit Datum */
@@ -51,15 +61,6 @@ h1, h2 {
     color: #FBE846;
     text-align: center;
     margin: 20px 0;
-}
-
-/* Container */
-.container {
-    max-width: 800px;
-    margin: 40px auto;
-    padding: 20px;
-    background: #FFFFF0; /* heller Container-Hintergrund, innerhalb der gelben Ränder */
-    border-radius: 8px;
 }
 
 /* Buttons, Inputs, Selects, Textarea */
@@ -75,7 +76,7 @@ button, input, select, textarea {
 /* Buttons */
 button {
     background: #FBE846;
-    color: #000000; /* schwarzer Text */
+    color: #000000;
     border: none;
     cursor: pointer;
     font-weight: bold;
@@ -89,7 +90,7 @@ button:hover {
 
 /* Formularkarten */
 .form-card {
-    background: #FFFFF0;
+    background: #FFFFFF;
     padding: 25px;
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.05);
