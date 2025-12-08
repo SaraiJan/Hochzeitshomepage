@@ -1,158 +1,164 @@
-/* --- Grundlegendes Styling für die ganze Seite --- */
-* {
-  box-sizing: border-box;
-}
-
+/* --- Grundlegendes Styling --- */
 body {
   font-family: 'Playfair Display', serif;
   margin: 0;
-  background: #FFF9C4;
+  background: #FFFFFF;
   color: #000;
 }
 
-/* Container mit weißem Hintergrund (#FFFFF0) */
+/* Container für Hauptinhalt */
 .container {
   max-width: 700px;
   margin: 40px auto 80px;
   padding: 20px;
-  background: #FFFFF0;
+  background: #fff;
   border-radius: 12px;
   box-shadow: 0 4px 15px rgba(0,0,0,0.1);
   text-align: center;
-  color: #000;
 }
 
-/* Headerbildbereich */
+/* Headerbereich */
 header.hero-header {
   position: relative;
   width: 100%;
-  height: 80vh;
-  background-image: url('images/header.jpg');
-  background-size: cover;
-  background-position: center;
+  height: 50vh;
+  background-color: #F5F1E6;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
-  color: white;
 }
 
-/* Overlay */
 .hero-header .overlay {
-  background-color: rgba(0,0,0,0.3);
-  padding: 0 20px;
   width: 100%;
+  padding: 20px;
 }
 
-/* Überschrift im Header */
 .hero-header h1 {
   font-size: 4rem;
   font-weight: 700;
-  margin: 0;
-  letter-spacing: 0.1em;
-  text-shadow: 1px 1px 5px rgba(0,0,0,0.7);
+  font-family: 'Playfair Display', serif;
 }
 
-/* Datum im Header */
 .hochzeitsdatum {
   font-family: 'Petit Formal Script', cursive;
   font-size: 2.5rem;
-  margin-top: 0.2em;
-  color: #FBE846;
-  text-shadow: 1px 1px 4px rgba(0,0,0,0.7);
+  color: #000;
 }
 
-/* Symbol unter Header */
+/* Symbol */
 .symbol {
   margin-bottom: 1rem;
-  filter: drop-shadow(0 0 1px #D4AF37);
 }
 
 /* Überschriften */
-.container h2 {
+h2 {
   font-weight: 700;
   font-size: 2rem;
-  color: #D4AF37;
   margin-bottom: 0.5rem;
 }
 
 /* Trennlinie */
 hr {
   border: none;
-  border-top: 2px solid #D4AF37;
+  border-top: 2px solid #000;
   width: 60px;
   margin: 1.5rem auto;
 }
 
-/* Textabsätze */
-.container p {
-  font-size: 1.1rem;
-  line-height: 1.6;
-  margin: 1rem 0;
-  color: #333;
+/* RSVP-Button */
+.rsvp-button {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 12px 25px;
+  background: #000;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 6px;
+  transition: 0.3s;
 }
 
-/* RSVP Formular */
-form {
-  max-width: 400px;
-  margin: 0 auto;
+.rsvp-button:hover {
+  background: #333;
+}
+
+/* --- Login-Seite --- */
+.login-box {
+  width: 320px;
+  margin: 100px auto;
+  padding: 2rem;
+  text-align: center;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.login-box input {
+  width: 100%;
+  padding: 12px;
+  margin: 15px 0;
+  font-size: 16px;
+  border: 1px solid #000;
+  border-radius: 6px;
+}
+
+.login-box button {
+  width: 100%;
+  padding: 12px;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+  background: #000;
+  color: #fff;
+  border-radius: 6px;
+  transition: 0.3s;
+}
+
+.login-box button:hover {
+  background: #333;
+}
+
+.error-msg {
+  color: red;
+  margin-top: 10px;
+  font-weight: 700;
+}
+
+/* --- RSVP Formular --- */
+.form-card {
   text-align: left;
 }
 
 form label {
   font-weight: 700;
+  margin-top: 10px;
   display: block;
-  margin-bottom: 5px;
 }
 
-form input[type="text"],
-form input[type="number"],
-form input[type="email"],
-form textarea,
-form select {
+form input, form textarea {
   width: 100%;
   padding: 8px;
-  margin-bottom: 12px;
-  border: 1px solid #A3B18A;
+  margin-top: 5px;
+  border: 1px solid #000;
   border-radius: 5px;
+  font-family: 'Playfair Display', serif;
   font-size: 1rem;
-}
-
-form input[type="radio"] {
-  margin-right: 8px;
+  box-sizing: border-box;
 }
 
 form button[type="submit"] {
-  background: #FBE846;
-  border: none;
-  padding: 12px 0;
+  margin-top: 15px;
   width: 100%;
+  padding: 12px 0;
   font-weight: bold;
   cursor: pointer;
+  background: #000;
+  color: #fff;
+  border: none;
   border-radius: 6px;
-  font-size: 18px;
-  transition: background 0.3s;
+  transition: 0.3s;
 }
 
 form button[type="submit"]:hover {
-  background: #D4AF37;
-  color: #FFFFF0;
-}
-
-/* RSVP Button auf Hauptseite */
-.rsvp-button {
-  display: inline-block;
-  margin-top: 20px;
-  padding: 12px 25px;
-  background: #FBE846;
-  color: #000;
-  font-weight: bold;
-  text-decoration: none;
-  border-radius: 6px;
-  transition: background 0.3s;
-}
-
-.rsvp-button:hover {
-  background: #D4AF37;
-  color: #FFFFF0;
+  background: #333;
 }
