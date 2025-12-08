@@ -1,97 +1,135 @@
-/* Body */
 body {
-    font-family: 'Playfair Display', serif;
-    margin: 0;
-    background: #FFF9C4; /* gelber Rand */
-    color: #000000;       /* schwarze Schrift */
+  font-family: 'Playfair Display', serif;
+  margin: 0;
+  background: #FFF9C4;
+  color: #000000;
 }
 
-/* Container */
 .container {
-    max-width: calc(100% - 10cm); /* links + rechts je 5 cm */
-    margin: 40px auto;
-    padding: 20px;
-    background: #FFFFFF; /* weißer Hauptbereich */
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  max-width: calc(100% - 10cm);
+  margin: 40px auto;
+  padding: 20px;
+  background: #FFFFFF;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  text-align: center;
 }
 
-/* Header */
-header {
-    background: #D4AF37; /* Gold */
-    color: #000000;       /* schwarzer Text */
-    padding: 20px;
-    text-align: center;
-    font-size: 32px;
-    font-weight: 700;
-    letter-spacing: 1px;
+header.hero-header {
+  position: relative;
+  width: 100%;
+  height: 80vh;
+  background-image: url('dein-bild.jpg'); /* Bild ersetzen */
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
 }
 
-/* Navigation */
+.hero-header .overlay {
+  background-color: rgba(0,0,0,0.3);
+  padding: 0 20px;
+  width: 100%;
+}
+
+.hero-header h1 {
+  font-size: 4rem;
+  font-weight: 700;
+  margin: 0;
+  letter-spacing: 0.1em;
+  font-family: 'Playfair Display', serif;
+  text-shadow: 1px 1px 5px rgba(0,0,0,0.7);
+}
+
+.hochzeitsdatum {
+  font-family: 'Petit Formal Script', cursive;
+  font-size: 2.5rem;
+  margin-top: 0.2em;
+  color: #FBE846;
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.7);
+}
+
+.symbol {
+  margin-bottom: 1rem;
+  filter: drop-shadow(0 0 1px #D4AF37);
+}
+
+.container h2 {
+  font-weight: 700;
+  font-size: 2rem;
+  color: #D4AF37;
+  margin-bottom: 0.5rem;
+}
+
+hr {
+  border: none;
+  border-top: 2px solid #D4AF37;
+  width: 60px;
+  margin: 1.5rem auto;
+}
+
+.container p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-top: 0;
+  margin-bottom: 1.2rem;
+  color: #333;
+}
+
+/* Navigation für RSVP-Seite */
 nav {
-    background: #FFFFF0; /* helle Navigation */
-    padding: 15px;
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    border-bottom: 2px solid #D4AF37;
+  background: #FFFFF0;
+  padding: 15px;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  border-bottom: 2px solid #D4AF37;
+  margin-bottom: 20px;
 }
 
 nav a {
-    text-decoration: none;
-    color: #A3B18A; /* grün */
-    font-weight: 700;
-    font-size: 18px;
+  text-decoration: none;
+  color: #A3B18A;
+  font-weight: 700;
+  font-size: 18px;
 }
 
 nav a:hover {
-    color: #FBE846; /* gelb */
+  color: #FBE846;
 }
 
-/* Überschriften */
-h1, h2 {
-    font-weight: 700; /* fett */
-    color: #D4AF37;
+/* Formular */
+.form-card {
+  background: #FFFFFF;
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  max-width: 600px;
+  margin: 0 auto;
 }
 
-/* Hochzeit Datum */
-.hochzeitsdatum {
-    font-family: 'Petit Formal Script', cursive;
-    font-size: 36px;
-    color: #FBE846;
-    text-align: center;
-    margin: 20px 0;
-}
-
-/* Buttons, Inputs, Selects, Textarea */
 button, input, select, textarea {
-    padding: 12px;
-    width: 100%;
-    margin: 10px 0;
-    font-size: 16px;
-    border: 1px solid #A3B18A;
-    border-radius: 6px;
+  padding: 12px;
+  width: 100%;
+  margin: 10px 0;
+  font-size: 16px;
+  border: 1px solid #A3B18A;
+  border-radius: 6px;
 }
 
-/* Buttons */
 button {
-    background: #FBE846;
-    color: #000000;
-    border: none;
-    cursor: pointer;
-    font-weight: bold;
-    transition: 0.3s;
+  background: #FBE846;
+  color: #000000;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
 }
 
 button:hover {
-    background: #D4AF37;
-    color: #FFFFF0;
-}
-
-/* Formularkarten */
-.form-card {
-    background: #FFFFFF;
-    padding: 25px;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  background: #D4AF37;
+  color: #FFFFF0;
 }
