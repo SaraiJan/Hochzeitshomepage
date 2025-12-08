@@ -19,11 +19,11 @@
 
 <script>
   const password = "gladan2025"; // Passwort hier eintragen
+  const input = document.getElementById('passInput');
+  const errorMsg = document.getElementById('error-msg');
 
   function checkPassword() {
-    const userPass = document.getElementById('passInput').value.trim();
-    const errorMsg = document.getElementById('error-msg');
-
+    const userPass = input.value.trim();
     if (userPass === password) {
       window.location.href = "home.html";
     } else {
@@ -31,11 +31,16 @@
     }
   }
 
-  // Optional: Enter-Taste zum Einloggen unterstützen
-  document.getElementById('passInput').addEventListener('keypress', function(e) {
+  // Enter-Taste unterstützt das Einloggen
+  input.addEventListener('keydown', function(e) {
     if(e.key === 'Enter') {
       checkPassword();
     }
+  });
+
+  // Fehlernachricht löschen, sobald der Nutzer tippt
+  input.addEventListener('input', function() {
+    errorMsg.textContent = "";
   });
 </script>
 </body>
