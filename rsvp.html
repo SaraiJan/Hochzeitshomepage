@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>Zu- oder Absagen</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>Zu- oder Absagen</header>
+
+<nav>
+    <a href="home.html">Start</a>
+    <a href="rsvp.html">Zu-/Absagen</a>
+</nav>
+
+<div class="container">
+    <div class="form-card">
+        <h2>RSVP Formular</h2>
+
+        <form action="DEINE_FORMSPREE_URL" method="POST">
+            
+            <label>Name:</label>
+            <input type="text" name="name" required>
+
+            <label>E-Mail (für Rückfragen):</label>
+            <input type="email" name="email">
+
+            <label>Kommst du?</label>
+            <select name="status" required>
+                <option value="Zusagen">Ich komme gern!</option>
+                <option value="Absagen">Leider nein.</option>
+            </select>
+
+            <label>Anzahl der Personen:</label>
+            <input type="number" name="personen" min="1" value="1">
+
+            <label>Nachricht (optional):</label>
+            <textarea name="message" rows="4"></textarea>
+
+            <button type="submit">Absenden</button>
+        </form>
+    </div>
+</div>
+
+</body>
+</html>
