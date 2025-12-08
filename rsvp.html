@@ -13,7 +13,7 @@
 <!-- Einfacher Passwortschutz -->
 <script>
   const password = "EuerPasswort"; // Passwort hier eintragen
-  let userPass = prompt("Bitte Passwort eingeben:");
+  const userPass = prompt("Bitte Passwort eingeben:");
   if(userPass !== password){
     alert("Falsches Passwort. Zugriff verweigert.");
     window.location.href = "about:blank";
@@ -34,11 +34,13 @@
       <label for="name">Name*</label>
       <input type="text" id="name" name="name" required>
 
-      <p>Teilnahme*</p>
-      <input type="radio" id="coming" name="attendance" value="Ja, ich komme" required>
-      <label for="coming">Ja, ich komme</label><br>
-      <input type="radio" id="not-coming" name="attendance" value="Nein, ich kann leider nicht" required>
-      <label for="not-coming">Nein, ich kann leider nicht</label><br><br>
+      <fieldset>
+        <legend>Teilnahme*</legend>
+        <input type="radio" id="coming" name="attendance" value="Ja, ich komme" required>
+        <label for="coming">Ja, ich komme</label><br>
+        <input type="radio" id="not-coming" name="attendance" value="Nein, ich kann leider nicht" required>
+        <label for="not-coming">Nein, ich kann leider nicht</label>
+      </fieldset>
 
       <label for="guests">Anzahl Begleitpersonen (optional)</label>
       <input type="number" id="guests" name="guests" min="0" max="5">
