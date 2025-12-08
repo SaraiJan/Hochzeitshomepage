@@ -1,52 +1,55 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>RSVP - Unsere Hochzeit</title>
-<meta name="robots" content="noindex, nofollow" />
-<link href="https://fonts.googleapis.com/css2?family=Petit+Formal+Script&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>RSVP - Eliza & Tom</title>
+  <meta name="robots" content="noindex, nofollow">
+  <link href="https://fonts.googleapis.com/css2?family=Petit+Formal+Script&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<header>Zu- oder Absagen</header>
+<script>
+  const password = "EuerPasswort"; // <-- Passwort wie auf index.html
+  let userPass = prompt("Bitte Passwort eingeben:");
+  if(userPass !== password){
+    alert("Falsches Passwort. Zugriff verweigert.");
+    window.location.href = "about:blank";
+  }
+</script>
 
-<nav>
-  <a href="home.html">Start</a>
-  <a href="rsvp.html">Zu-/Absagen</a>
-</nav>
+<header class="hero-header">
+  <div class="overlay">
+    <h1>RSVP</h1>
+  </div>
+</header>
 
 <main class="container">
-  <h1>RSVP</h1>
-  <p>Bitte sag uns Bescheid, ob du kommen kannst.</p>
-
   <div class="form-card">
-    <h2>RSVP Formular</h2>
+    <h2>Zu- oder Absagen</h2>
     <form action="https://formspree.io/f/your-form-id" method="POST">
-      
       <label for="name">Name*</label>
-      <input type="text" id="name" name="name" required /><br/><br/>
+      <input type="text" id="name" name="name" required>
 
-      <label>Teilnahme*</label><br/>
-      <input type="radio" id="coming" name="attendance" value="Ja, ich komme" required />
-      <label for="coming">Ja, ich komme</label><br/>
-      <input type="radio" id="not-coming" name="attendance" value="Nein, ich kann leider nicht" required />
-      <label for="not-coming">Nein, ich kann leider nicht</label><br/><br/>
+      <label>Teilnahme*</label>
+      <input type="radio" id="coming" name="attendance" value="Ja, ich komme" required>
+      <label for="coming">Ja, ich komme</label>
+      <input type="radio" id="not-coming" name="attendance" value="Nein, ich kann leider nicht" required>
+      <label for="not-coming">Nein, ich kann leider nicht</label>
 
-      <label for="guests">Anzahl Begleitpersonen (optional)</label><br/>
-      <input type="number" id="guests" name="guests" min="0" max="5" /><br/><br/>
+      <label for="guests">Anzahl Begleitpersonen (optional)</label>
+      <input type="number" id="guests" name="guests" min="0" max="5">
 
-      <label for="email">E-Mail (für Rückfragen, optional)</label><br/>
-      <input type="email" id="email" name="email" /><br/><br/>
+      <label for="email">E-Mail (optional)</label>
+      <input type="email" id="email" name="email">
 
-      <label for="message">Nachricht (optional)</label><br/>
-      <textarea id="message" name="message" rows="4"></textarea><br/><br/>
+      <label for="message">Nachricht (optional)</label>
+      <textarea id="message" name="message" rows="4"></textarea>
 
       <button type="submit">Absenden</button>
     </form>
   </div>
-
 </main>
 
 </body>
