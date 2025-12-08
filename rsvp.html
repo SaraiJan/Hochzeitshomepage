@@ -3,47 +3,37 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Zu- oder Absagen</title>
+  <title>RSVP - Unsere Hochzeit</title>
   <meta name="robots" content="noindex, nofollow" />
   <link href="https://fonts.googleapis.com/css2?family=Petit+Formal+Script&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-<header>Zu- oder Absagen</header>
+<main class="container">
+  <h1>RSVP</h1>
+  <p>Bitte sag uns Bescheid, ob du kommen kannst.</p>
 
-<nav>
-  <a href="home.html">Start</a>
-  <a href="rsvp.html">Zu-/Absagen</a>
-</nav>
+  <form action="https://formspree.io/f/your-form-id" method="POST">
+    <label for="name">Name*</label><br/>
+    <input type="text" id="name" name="name" required /><br/><br/>
 
-<div class="container">
-  <div class="form-card">
-    <h2>RSVP Formular</h2>
+    <label>Teilnahme*</label><br/>
+    <input type="radio" id="coming" name="attendance" value="Ja, ich komme" required />
+    <label for="coming">Ja, ich komme</label><br/>
+    <input type="radio" id="not-coming" name="attendance" value="Nein, ich kann leider nicht" required />
+    <label for="not-coming">Nein, ich kann leider nicht</label><br/><br/>
 
-    <form action="DEINE_FORMSPREE_URL" method="POST">
-      <label>Name:</label>
-      <input type="text" name="name" required />
+    <label for="guests">Anzahl Begleitpersonen (optional)</label><br/>
+    <input type="number" id="guests" name="guests" min="0" max="5" /><br/><br/>
 
-      <label>E-Mail (für Rückfragen):</label>
-      <input type="email" name="email" />
+    <label for="message">Nachricht (optional)</label><br/>
+    <textarea id="message" name="message" rows="4"></textarea><br/><br/>
 
-      <label>Kommst du?</label>
-      <select name="status" required>
-        <option value="Zusagen">Ich komme gern!</option>
-        <option value="Absagen">Leider nein.</option>
-      </select>
+    <button type="submit">Absenden</button>
+  </form>
 
-      <label>Anzahl der Personen:</label>
-      <input type="number" name="personen" min="1" value="1" />
-
-      <label>Nachricht (optional):</label>
-      <textarea name="message" rows="4"></textarea>
-
-      <button type="submit">Absenden</button>
-    </form>
-  </div>
-</div>
+</main>
 
 </body>
 </html>
