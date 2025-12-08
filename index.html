@@ -2,46 +2,31 @@
 <html lang="de">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Eliza & Tom – Unsere Hochzeit</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Unsere Hochzeit - Zugang</title>
   <meta name="robots" content="noindex, nofollow">
   <link href="https://fonts.googleapis.com/css2?family=Petit+Formal+Script&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <div class="login-box">
+    <h1>Willkommen</h1>
+    <p>Bitte Passwort eingeben, um die Hochzeitsseite zu betreten.</p>
+    <input type="password" id="passInput" placeholder="Passwort">
+    <button onclick="checkPassword()">Einloggen</button>
+    <p class="error-msg" id="error-msg"></p>
+  </div>
 
-<!-- Passwortschutz -->
 <script>
-  const password = "gladan2025"; // <-- hier Passwort eintragen
-  const userPass = prompt("Bitte Passwort eingeben:");
-  if(userPass !== password){
-    alert("Falsches Passwort. Zugriff verweigert.");
-    window.location.href = "about:blank";
+  const password = "gladan2025"; // Passwort hier eintragen
+  function checkPassword() {
+    const userPass = document.getElementById('passInput').value;
+    if(userPass === password){
+      window.location.href = "home.html";
+    } else {
+      document.getElementById('error-msg').textContent = "Falsches Passwort.";
+    }
   }
 </script>
-
-<header class="hero-header">
-  <div class="overlay">
-    <h1>Eliza &amp; Tom</h1>
-    <p class="hochzeitsdatum">12. Juli 2025</p>
-  </div>
-</header>
-
-<main class="container">
-  <div class="symbol" aria-hidden="true">
-    <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M32 12C20 28 10 40 10 50H54C54 40 44 28 32 12Z" stroke="#D4AF37" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-    </svg>
-  </div>
-
-  <h2>Für jetzt und für immer!</h2>
-  <p>Wir freuen uns, diesen besonderen Tag mit euch zu feiern.</p>
-  <hr>
-  <p>Einladung zur Hochzeit von Eliza &amp; Tom am 12. Juli 2025 im Schlossgarten Musterstadt.</p>
-
-  <a href="rsvp.html" class="rsvp-button">Zu- oder Absagen</a>
-</main>
-
 </body>
 </html>
-
