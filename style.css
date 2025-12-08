@@ -1,67 +1,82 @@
+/* Allgemein */
 body {
     font-family: "Helvetica Neue", Arial, sans-serif;
     margin: 0;
-    background: #faf7f5;
+    background: #F5F1E6; /* helles Beige als Hintergrund */
     color: #333;
 }
 
+/* Header */
 header {
-    background: #c79bb6;
-    color: white;
+    background: #D4AF37; /* Gold */
+    color: #FFFFF0;      /* fast Weiß für Text */
     padding: 20px;
     text-align: center;
     font-size: 32px;
     letter-spacing: 1px;
 }
 
+/* Navigation */
 nav {
-    background: #fff;
+    background: #FFFFF0; /* fast Weiß */
     padding: 15px;
     display: flex;
     justify-content: center;
     gap: 30px;
-    border-bottom: 1px solid #eee;
+    border-bottom: 2px solid #D4AF37;
 }
 
 nav a {
     text-decoration: none;
-    color: #c79bb6;
+    color: #A3B18A; /* Grün für Links */
     font-weight: bold;
     font-size: 18px;
 }
 
+nav a:hover {
+    color: #FBE846; /* leuchtendes Gelb beim Hover */
+}
+
+/* Container */
 .container {
     max-width: 800px;
     margin: 40px auto;
     padding: 0 20px;
 }
 
+/* Überschriften */
 h1, h2 {
-    color: #c79bb6;
+    color: #D4AF37; /* Gold */
 }
 
+/* Buttons, Inputs, Selects, Textarea */
 button, input, select, textarea {
     padding: 12px;
     width: 100%;
     margin: 10px 0;
     font-size: 16px;
-    border: 1px solid #ccc;
+    border: 1px solid #A3B18A; /* grüne Akzente */
     border-radius: 6px;
 }
 
+/* Buttons */
 button {
-    background: #c79bb6;
-    color: white;
+    background: #FBE846; /* leuchtendes Gelb */
+    color: #333;          /* dunkler Text */
     border: none;
     cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
 }
 
 button:hover {
-    opacity: 0.9;
+    background: #D4AF37; /* gold beim Hover */
+    color: #FFFFF0;
 }
 
+/* Formularkarten */
 .form-card {
-    background: #fff;
+    background: #FFFFF0; /* fast Weiß */
     padding: 25px;
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.05);
