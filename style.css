@@ -1,16 +1,16 @@
 /* --- Grundlegendes Styling für die ganze Seite --- */
 * {
-  box-sizing: border-box; /* sorgt für konsistentes Padding/Margin */
+  box-sizing: border-box;
 }
 
 body {
   font-family: 'Playfair Display', serif;
   margin: 0;
-  background: #FFF9C4; /* Seitenhintergrund links/rechts */
-  color: #000000;
+  background: #FFF9C4;
+  color: #000;
 }
 
-/* Container mit weißem Hintergrund (#FFFFF0) und Schatten */
+/* Container mit weißem Hintergrund (#FFFFF0) */
 .container {
   max-width: 700px;
   margin: 40px auto 80px;
@@ -19,15 +19,15 @@ body {
   border-radius: 12px;
   box-shadow: 0 4px 15px rgba(0,0,0,0.1);
   text-align: center;
-  color: #000000;
+  color: #000;
 }
 
-/* --- Header-Bildbereich --- */
+/* Headerbildbereich */
 header.hero-header {
   position: relative;
   width: 100%;
   height: 80vh;
-  background-image: url('images/header.jpg'); /* Pfad zum Headerbild */
+  background-image: url('images/header.jpg');
   background-size: cover;
   background-position: center;
   display: flex;
@@ -37,7 +37,7 @@ header.hero-header {
   color: white;
 }
 
-/* Dunkles Overlay für besseren Kontrast */
+/* Overlay */
 .hero-header .overlay {
   background-color: rgba(0,0,0,0.3);
   padding: 0 20px;
@@ -50,7 +50,6 @@ header.hero-header {
   font-weight: 700;
   margin: 0;
   letter-spacing: 0.1em;
-  font-family: 'Playfair Display', serif;
   text-shadow: 1px 1px 5px rgba(0,0,0,0.7);
 }
 
@@ -63,13 +62,13 @@ header.hero-header {
   text-shadow: 1px 1px 4px rgba(0,0,0,0.7);
 }
 
-/* Symbol unter dem Header */
+/* Symbol unter Header */
 .symbol {
   margin-bottom: 1rem;
   filter: drop-shadow(0 0 1px #D4AF37);
 }
 
-/* Überschriften im Container */
+/* Überschriften */
 .container h2 {
   font-weight: 700;
   font-size: 2rem;
@@ -89,70 +88,21 @@ hr {
 .container p {
   font-size: 1.1rem;
   line-height: 1.6;
-  margin-top: 0;
-  margin-bottom: 1.2rem;
+  margin: 1rem 0;
   color: #333;
 }
 
-/* --- Styling Login-Seite --- */
-.login-box {
-  background: #FFFFF0;
-  padding: 2rem;
-  border-radius: 12px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-  text-align: center;
-  width: 320px;
-  font-family: 'Playfair Display', serif;
-  margin: 40px auto;
-}
-
-.login-box input {
-  width: 100%;
-  padding: 12px;
-  margin: 15px 0;
-  font-size: 16px;
-  border: 1px solid #A3B18A;
-  border-radius: 6px;
-}
-
-.login-box button {
-  background: #FBE846;
-  border: none;
-  padding: 12px 0;
-  width: 100%;
-  font-weight: bold;
-  cursor: pointer;
-  transition: 0.3s;
-  color: #000;
-  border-radius: 6px;
-  font-size: 18px;
-}
-
-.login-box button:hover {
-  background: #D4AF37;
-  color: #FFFFF0;
-}
-
-.error-msg {
-  color: red;
-  height: 1.2em;
-  margin-top: 10px;
-  font-weight: 700;
-}
-
-/* --- RSVP Formular --- */
+/* RSVP Formular */
 form {
   max-width: 400px;
-  margin: 20px auto;
+  margin: 0 auto;
   text-align: left;
-  font-family: 'Playfair Display', serif;
 }
 
 form label {
   font-weight: 700;
-  margin-bottom: 5px;
   display: block;
-  color: #333;
+  margin-bottom: 5px;
 }
 
 form input[type="text"],
@@ -162,12 +112,10 @@ form textarea,
 form select {
   width: 100%;
   padding: 8px;
+  margin-bottom: 12px;
   border: 1px solid #A3B18A;
   border-radius: 5px;
-  font-family: 'Playfair Display', serif;
   font-size: 1rem;
-  box-sizing: border-box;
-  margin-bottom: 12px;
 }
 
 form input[type="radio"] {
@@ -181,13 +129,30 @@ form button[type="submit"] {
   width: 100%;
   font-weight: bold;
   cursor: pointer;
-  color: #000;
   border-radius: 6px;
   font-size: 18px;
   transition: background 0.3s;
 }
 
 form button[type="submit"]:hover {
+  background: #D4AF37;
+  color: #FFFFF0;
+}
+
+/* RSVP Button auf Hauptseite */
+.rsvp-button {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 25px;
+  background: #FBE846;
+  color: #000;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: background 0.3s;
+}
+
+.rsvp-button:hover {
   background: #D4AF37;
   color: #FFFFF0;
 }
