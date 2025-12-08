@@ -31,8 +31,9 @@
     }
   }
 
-  document.getElementById('passInput').addEventListener('keypress', function(e) {
-    if(e.key === 'Enter') {
+  // Enter-Taste zum Einloggen unterstützen
+  document.getElementById('passInput').addEventListener('keydown', function(e) {
+    if (e.key === 'Enter') {
       checkPassword();
     }
   });
