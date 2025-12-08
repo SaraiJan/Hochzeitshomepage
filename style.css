@@ -1,50 +1,164 @@
-<!DOCTYPE html>
-<html lang="de">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>RSVP - Eliza & Tom</title>
-  <meta name="robots" content="noindex, nofollow">
-  <link href="https://fonts.googleapis.com/css2?family=Petit+Formal+Script&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
+/* --- Grundlegendes Styling --- */
+body {
+  font-family: 'Playfair Display', serif;
+  margin: 0;
+  background: #FFFFFF;
+  color: #000;
+}
 
-<header class="hero-header">
-  <div class="overlay">
-    <h1>RSVP</h1>
-  </div>
-</header>
+/* Container */
+.container {
+  max-width: 700px;
+  margin: 40px auto 80px;
+  padding: 20px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  text-align: center;
+}
 
-<main class="container">
-  <div class="form-card">
-    <h2>Zu- oder Absagen</h2>
-    <form action="https://formspree.io/f/your-form-id" method="POST">
-      
-      <label for="name">Name*</label>
-      <input type="text" id="name" name="name" required>
+/* Headerbereich */
+header.hero-header {
+  position: relative;
+  width: 100%;
+  height: 50vh;
+  background-color: #F5F1E6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
 
-      <fieldset>
-        <legend>Teilnahme*</legend>
-        <input type="radio" id="coming" name="attendance" value="Ja, ich komme" required>
-        <label for="coming">Ja, ich komme</label><br>
-        <input type="radio" id="not-coming" name="attendance" value="Nein, ich kann leider nicht" required>
-        <label for="not-coming">Nein, ich kann leider nicht</label>
-      </fieldset>
+.hero-header .overlay {
+  width: 100%;
+  padding: 20px;
+}
 
-      <label for="guests">Anzahl Begleitpersonen (optional)</label>
-      <input type="number" id="guests" name="guests" min="0" max="5">
+.hero-header h1 {
+  font-size: 4rem;
+  font-weight: 700;
+  font-family: 'Playfair Display', serif;
+}
 
-      <label for="email">E-Mail (optional)</label>
-      <input type="email" id="email" name="email">
+.hochzeitsdatum {
+  font-family: 'Petit Formal Script', cursive;
+  font-size: 2.5rem;
+  color: #000;
+}
 
-      <label for="message">Nachricht (optional)</label>
-      <textarea id="message" name="message" rows="4"></textarea>
+/* Symbol */
+.symbol {
+  margin-bottom: 1rem;
+}
 
-      <button type="submit">Absenden</button>
-    </form>
-  </div>
-</main>
+/* Überschriften */
+h2 {
+  font-weight: 700;
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
 
-</body>
-</html>
+/* Trennlinie */
+hr {
+  border: none;
+  border-top: 2px solid #000;
+  width: 60px;
+  margin: 1.5rem auto;
+}
+
+/* RSVP-Button */
+.rsvp-button {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 12px 25px;
+  background: #000;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 6px;
+  transition: 0.3s;
+}
+
+.rsvp-button:hover {
+  background: #333;
+}
+
+/* --- Login-Seite --- */
+.login-box {
+  width: 320px;
+  margin: 100px auto;
+  padding: 2rem;
+  text-align: center;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.login-box input {
+  width: 100%;
+  padding: 12px;
+  margin: 15px 0;
+  font-size: 16px;
+  border: 1px solid #000;
+  border-radius: 6px;
+}
+
+.login-box button {
+  width: 100%;
+  padding: 12px;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+  background: #000;
+  color: #fff;
+  border-radius: 6px;
+  transition: 0.3s;
+}
+
+.login-box button:hover {
+  background: #333;
+}
+
+.error-msg {
+  color: red;
+  margin-top: 10px;
+  font-weight: 700;
+}
+
+/* --- RSVP Formular --- */
+.form-card {
+  text-align: left;
+}
+
+form label {
+  font-weight: 700;
+  margin-top: 10px;
+  display: block;
+}
+
+form input, form textarea {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  border: 1px solid #000;
+  border-radius: 5px;
+  font-family: 'Playfair Display', serif;
+  font-size: 1rem;
+  box-sizing: border-box;
+}
+
+form button[type="submit"] {
+  margin-top: 15px;
+  width: 100%;
+  padding: 12px 0;
+  font-weight: bold;
+  cursor: pointer;
+  background: #000;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  transition: 0.3s;
+}
+
+form button[type="submit"]:hover {
+  background: #333;
+}
