@@ -23,7 +23,6 @@
   function checkPassword() {
     const userPass = document.getElementById('passInput').value.trim();
     const errorMsg = document.getElementById('error-msg');
-
     if (userPass === password) {
       window.location.href = "home.html";
     } else {
@@ -31,7 +30,6 @@
     }
   }
 
-  // Enter-Taste zum Einloggen unterstützen
   document.getElementById('passInput').addEventListener('keydown', function(e) {
     if (e.key === 'Enter') {
       checkPassword();
