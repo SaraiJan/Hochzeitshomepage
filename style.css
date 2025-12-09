@@ -40,6 +40,7 @@ nav {
     left: 50%;
     transform: translateX(-50%);
     background: transparent;
+    z-index: 1000; /* Sicherstellen, dass die Navigation immer oben bleibt */
 }
 
 nav ul {
@@ -51,7 +52,7 @@ nav ul {
 }
 
 nav ul li {
-    display: inline;
+    display: block; /* Entfernt inline, da Flexbox verwendet wird */
 }
 
 nav a {
@@ -73,7 +74,7 @@ nav a.active {
 
 /* Main Content */
 .main-content {
-    margin-top: 100px;
+    margin-top: 120px; /* Vermeidung von Überschneidungen mit der Navigation */
     text-align: center;
     padding: 40px;
 }
@@ -98,4 +99,40 @@ footer {
     font-size: 0.9em;
     background-color: #f9f9f9;
     margin-top: 50px;
+}
+
+/* Responsive Design für kleinere Bildschirme */
+@media (max-width: 768px) {
+    /* Navigation: kleinere Schriftgröße und engerer Abstand */
+    nav ul {
+        gap: 20px;
+    }
+
+    nav a {
+        font-size: 1em;
+    }
+
+    .main-content {
+        padding: 20px;
+    }
+
+    .main-content h2 {
+        font-size: 2em;
+    }
+
+    .main-content p {
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Für sehr kleine Bildschirme: Navigation vertikal ausrichten */
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav a {
+        font-size: 1.2em;
+    }
 }
