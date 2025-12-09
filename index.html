@@ -1,42 +1,42 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Unsere Hochzeit - Zugang</title>
-  <meta name="robots" content="noindex, nofollow">
-  <link href="https://fonts.googleapis.com/css2?family=Petit+Formal+Script&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <title>Unsere Hochzeit</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Petit+Formal+Script&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="login-box">
-    <h1>Willkommen</h1>
-    <p>Bitte Passwort eingeben, um die Hochzeitsseite zu betreten.</p>
-    <input type="password" id="passInput" placeholder="Passwort">
-    <button type="button" onclick="checkPassword()">Einloggen</button>
-    <p class="error-msg" id="error-msg"></p>
-  </div>
 
-<script>
-  const password = "gladan2025"; // Passwort hier eintragen
+    <div class="container">
+        <!-- Header Section -->
+        <header>
+            <h1>Unsere Hochzeit</h1>
+            <div class="date">Am 20. Juni 2025</div>
+        </header>
 
-  function checkPassword() {
-    const userPass = document.getElementById('passInput').value.trim();
-    const errorMsg = document.getElementById('error-msg');
+        <!-- Navigation -->
+        <nav>
+            <ul>
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="rsvp.html">RSVP</a></li>
+            </ul>
+        </nav>
 
-    if (userPass === password) {
-      window.location.href = "home.html";
-    } else {
-      errorMsg.textContent = "Falsches Passwort.";
-    }
-  }
+        <!-- Main Content Section -->
+        <div class="main-content">
+            <h2>Willkommen zu unserer Hochzeit!</h2>
+            <p>Wir freuen uns, euch zu unserer Hochzeit einzuladen! Bitte bestätigt eure Teilnahme und informiert euch über die Details der Feier.</p>
+            <p>Die Feierlichkeiten beginnen um 15:00 Uhr. Wir können es kaum erwarten, diesen besonderen Tag mit euch zu teilen!</p>
+        </div>
 
-  // Enter-Taste unterstützt
-  document.getElementById('passInput').addEventListener('keydown', function(e) {
-    if (e.key === 'Enter') {
-      checkPassword();
-    }
-  });
-</script>
+        <!-- Footer -->
+        <footer>
+            <p>&copy; 2025 Unsere Hochzeit | Alle Rechte vorbehalten</p>
+        </footer>
+    </div>
+
 </body>
 </html>
