@@ -47,18 +47,21 @@
         /* Navigation */
         nav {
             position: fixed;
-            top: 20px;
+            top: 0;
             left: 50%;
             transform: translateX(-50%);
             background-color: transparent;
             z-index: 100;
+            width: 100%;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
 
         nav ul {
             list-style-type: none;
             display: flex;
+            justify-content: center;
             gap: 30px;
-            padding: 0;
+            padding: 10px 0;
             margin: 0;
         }
 
@@ -92,7 +95,7 @@
 
         /* Main content */
         .main-content {
-            margin-top: 150px;
+            margin-top: 120px; /* Platz für fixe Navigation */
         }
 
         .main-content h2 {
@@ -105,7 +108,7 @@
             font-size: 1.2em;
             color: #666;
             max-width: 800px;
-            margin: 0 auto;
+            margin: 20px auto;
         }
 
         /* Footer */
@@ -115,6 +118,26 @@
             font-size: 0.9em;
             background-color: #f9f9f9;
             margin-top: 50px;
+        }
+
+        /* Responsives Design */
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .main-content h2 {
+                font-size: 2em;
+            }
+
+            .main-content p {
+                font-size: 1em;
+            }
+
+            footer {
+                padding: 15px;
+            }
         }
     </style>
 </head>
@@ -147,6 +170,18 @@
             <p>&copy; 2025 Unsere Hochzeit | Alle Rechte vorbehalten</p>
         </footer>
     </div>
+
+    <!-- Optional JavaScript für aktive Links -->
+    <script>
+        const currentPage = window.location.pathname;
+        const navLinks = document.querySelectorAll("nav a");
+
+        navLinks.forEach(link => {
+            if (link.href.includes(currentPage)) {
+                link.classList.add("active");
+            }
+        });
+    </script>
 
 </body>
 
