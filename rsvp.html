@@ -38,6 +38,7 @@
             left: 50%;
             transform: translateX(-50%);
             background: transparent;
+            z-index: 1000; /* Sicherstellen, dass Navigation über dem Inhalt bleibt */
         }
 
         nav ul {
@@ -95,6 +96,10 @@
             border-radius: 5px;
         }
 
+        .rsvp-form input[type="radio"] {
+            margin-right: 10px;
+        }
+
         .rsvp-form button {
             background-color: #ffcc00;
             color: white;
@@ -131,14 +136,17 @@
     <!-- RSVP Form -->
     <section id="rsvp">
         <h2>RSVP Formular</h2>
-        <form name="rsvp" method="POST" data-netlify="true" class="rsvp-form">
+        <form name="rsvp" method="POST" data-netlify="true" action="/" class="rsvp-form">
+            <!-- Name -->
             <label for="name">Ihr Name:</label>
             <input type="text" id="name" name="name" placeholder="Ihr Name" required>
 
-            <label for="attendance">Werden Sie teilnehmen?</label>
+            <!-- Teilnahme -->
+            <label for="attendance">Werden Sie teilnehmen?</label><br>
             <input type="radio" id="yes" name="attendance" value="Ja" required> Ja
             <input type="radio" id="no" name="attendance" value="Nein"> Nein
 
+            <!-- Nachricht -->
             <label for="message">Ihre Nachricht:</label>
             <textarea id="message" name="message" placeholder="Besondere Wünsche oder Nachrichten" rows="4"></textarea>
 
