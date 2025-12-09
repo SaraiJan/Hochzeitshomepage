@@ -3,14 +3,11 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Arial', sans-serif;
-    background-color: white;
-    color: black;
-}
-
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
+    background-color: #fff;
+    color: #333;
+    line-height: 1.6;
+    padding-left: 3cm;  /* 3 cm linker Rand */
+    padding-right: 3cm; /* 3 cm rechter Rand */
 }
 
 /* Header */
@@ -20,9 +17,10 @@ header {
     background-color: #f9f9f9;
 }
 
-h1 {
+header h1 {
     font-family: 'Playfair Display', serif;
     font-size: 3em;
+    margin: 0;
     color: #333;
 }
 
@@ -30,34 +28,37 @@ h1 {
     font-family: 'Petit Formal Script', cursive;
     font-size: 2em;
     margin-top: 20px;
-    color: #888;
+    color: #666;
 }
 
 /* Navigation */
 nav {
     position: fixed;
-    top: 20px;
+    top: 0;
     left: 50%;
     transform: translateX(-50%);
-    background: transparent;
-    z-index: 1000; /* Sicherstellen, dass die Navigation immer oben bleibt */
+    background-color: transparent;
+    z-index: 100;
+    width: 100%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 nav ul {
     list-style-type: none;
     display: flex;
+    justify-content: center;
     gap: 30px;
-    padding: 0;
+    padding: 10px 0;
     margin: 0;
 }
 
 nav ul li {
-    display: block; /* Entfernt inline, da Flexbox verwendet wird */
+    display: inline;
 }
 
 nav a {
     text-decoration: none;
-    color: black;
+    color: #333;
     font-weight: bold;
     font-size: 1.2em;
     transition: color 0.3s ease;
@@ -67,16 +68,21 @@ nav a:hover {
     color: #ffcc00;
 }
 
-/* Active link styling */
 nav a.active {
-    color: #ffcc00;
+    color: #ffcc00; /* Highlight active link */
 }
 
-/* Main Content */
-.main-content {
-    margin-top: 120px; /* Vermeidung von Überschneidungen mit der Navigation */
+/* Container (main content) */
+.container {
+    padding: 40px 20px;
     text-align: center;
-    padding: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Main content */
+.main-content {
+    margin-top: 120px; /* Platz für fixe Navigation */
 }
 
 .main-content h2 {
@@ -88,8 +94,8 @@ nav a.active {
 .main-content p {
     font-size: 1.2em;
     color: #666;
-    line-height: 1.6;
-    margin: 20px 0;
+    max-width: 800px;
+    margin: 20px auto;
 }
 
 /* Footer */
@@ -101,19 +107,11 @@ footer {
     margin-top: 50px;
 }
 
-/* Responsive Design für kleinere Bildschirme */
+/* Responsives Design */
 @media (max-width: 768px) {
-    /* Navigation: kleinere Schriftgröße und engerer Abstand */
     nav ul {
-        gap: 20px;
-    }
-
-    nav a {
-        font-size: 1em;
-    }
-
-    .main-content {
-        padding: 20px;
+        flex-direction: column;
+        gap: 15px;
     }
 
     .main-content h2 {
@@ -123,16 +121,8 @@ footer {
     .main-content p {
         font-size: 1em;
     }
-}
 
-@media (max-width: 480px) {
-    /* Für sehr kleine Bildschirme: Navigation vertikal ausrichten */
-    nav ul {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    nav a {
-        font-size: 1.2em;
+    footer {
+        padding: 15px;
     }
 }
