@@ -46,11 +46,11 @@
 
     <!-- Optional JavaScript für aktive Links -->
     <script>
-        const currentPage = window.location.pathname;
+        const currentPage = window.location.href;  // Wir vergleichen die gesamte URL
         const navLinks = document.querySelectorAll("nav a");
 
         navLinks.forEach(link => {
-            if (link.href.includes(currentPage)) {
+            if (currentPage.includes(link.href)) {
                 link.classList.add("active");
             }
         });
