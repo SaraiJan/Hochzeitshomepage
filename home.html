@@ -31,27 +31,6 @@
             margin-top: 20px;
         }
 
-        .container {
-            width: 100%;
-            height: 100%;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        .content {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-
-        .sidebar {
-            position: absolute;
-            top: 0;
-            bottom: 0;
-            width: 2cm;
-            background-color: #f1f1c1;
-        }
-
         nav {
             position: fixed;
             top: 20px;
@@ -76,62 +55,47 @@
             font-size: 1.2em;
         }
 
+        .container {
+            padding: 20px;
+        }
+
         footer {
             text-align: center;
             padding: 20px;
             font-size: 0.9em;
-            position: absolute;
-            width: 100%;
-            bottom: 0;
         }
 
-        .password-protect {
-            display: none; /* Hidden for now, to be enabled on Netlify */
+        /* Navigation active styling */
+        .active {
+            color: #ffcc00;
         }
     </style>
 </head>
 <body>
 
 <div class="container">
-    <div class="sidebar"></div> <!-- Left Sidebar -->
+    <header>
+        <h1>Unsere Hochzeit</h1>
+        <div class="date">Am 20. Juni 2025</div>
+    </header>
 
-    <div class="content">
-        <header>
-            <h1>Unsere Hochzeit</h1>
-            <div class="date">Am 20. Juni 2025</div>
-        </header>
+    <nav>
+        <ul>
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="rsvp.html">RSVP</a></li>
+            <li><a href="uebernachtung.html">Übernachtung</a></li>
+        </ul>
+    </nav>
 
-        <nav>
-            <ul>
-                <li><a href="#rsvp">RSVP</a></li>
-                <li><a href="#start">Start</a></li>
-                <li><a href="#uebernachtung">Übernachtung</a></li>
-            </ul>
-        </nav>
+    <section>
+        <h2>Willkommen zu unserer Hochzeit</h2>
+        <p>Wir freuen uns, euch zu unserer Hochzeit einzuladen. Bitte bestätigt eure Teilnahme und seht euch die Übernachtungsmöglichkeiten an.</p>
+    </section>
 
-        <section id="rsvp">
-            <h2>RSVP</h2>
-            <p>Bitte bestätigen Sie Ihre Teilnahme.</p>
-        </section>
-
-        <section id="start">
-            <h2>Start</h2>
-            <p>Details zur Zeremonie und zum Empfang.</p>
-        </section>
-
-        <section id="uebernachtung">
-            <h2>Übernachtung</h2>
-            <p>Informationen zu Hotels und Unterkünften.</p>
-        </section>
-
-    </div>
-
-    <div class="sidebar" style="right: 0;"></div> <!-- Right Sidebar -->
+    <footer>
+        <p>&copy; 2025 Unsere Hochzeit | Alle Rechte vorbehalten</p>
+    </footer>
 </div>
-
-<footer>
-    <p>&copy; 2025 Unsere Hochzeit | Alle Rechte vorbehalten</p>
-</footer>
 
 </body>
 </html>
