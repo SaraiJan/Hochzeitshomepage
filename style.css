@@ -6,27 +6,27 @@ body {
     background-color: #fff;
     color: #333;
     line-height: 1.6;
-    padding-left: 3cm;  /* 3 cm linker Rand */
-    padding-right: 3cm; /* 3 cm rechter Rand */
+    padding-left: 3%;  /* Relativer Abstand für flexiblere Darstellung */
+    padding-right: 3%; /* Relativer Abstand für flexiblere Darstellung */
 }
 
 /* Header */
 header {
     text-align: center;
-    padding: 50px 0;
+    padding: 60px 0; /* Etwas mehr Platz oben und unten für bessere visuelle Wirkung */
     background-color: #f9f9f9;
 }
 
 header h1 {
     font-family: 'Playfair Display', serif;
-    font-size: 3em;
+    font-size: 3.2em; /* Größere Schrift für die Überschrift */
     margin: 0;
     color: #333;
 }
 
 .date {
     font-family: 'Petit Formal Script', cursive;
-    font-size: 2em;
+    font-size: 2.2em;
     margin-top: 20px;
     color: #666;
 }
@@ -82,13 +82,14 @@ nav a.active {
 
 /* Main content */
 .main-content {
-    margin-top: 120px; /* Platz für fixe Navigation */
+    margin-top: 150px; /* Platz für fixe Navigation */
 }
 
 .main-content h2 {
     font-family: 'Playfair Display', serif;
-    font-size: 2.5em;
+    font-size: 2.8em; /* Etwas größere Schrift für bessere Lesbarkeit */
     color: #333;
+    margin-bottom: 20px; /* Abstand nach der Überschrift */
 }
 
 .main-content p {
@@ -102,7 +103,7 @@ nav a.active {
 footer {
     text-align: center;
     padding: 20px;
-    font-size: 0.9em;
+    font-size: 1em;
     background-color: #f9f9f9;
     margin-top: 50px;
 }
@@ -115,14 +116,18 @@ footer {
     }
 
     .main-content h2 {
-        font-size: 2em;
+        font-size: 2.2em; /* Kleinere Schrift auf mobilen Geräten */
     }
 
     .main-content p {
-        font-size: 1em;
+        font-size: 1em; /* Kleinere Schrift für bessere Lesbarkeit auf kleinen Bildschirmen */
     }
 
     footer {
         padding: 15px;
+    }
+
+    nav {
+        box-shadow: none; /* Schatten auf kleineren Bildschirmen entfernen */
     }
 }
