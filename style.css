@@ -1,164 +1,101 @@
-/* --- Grundlegendes Styling --- */
+/* Allgemeine Stileinstellungen */
 body {
-  font-family: 'Playfair Display', serif;
-  margin: 0;
-  background: #FFFFFF;
-  color: #000;
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: white;
+    color: black;
 }
 
-/* Container */
 .container {
-  max-width: 700px;
-  margin: 40px auto 80px;
-  padding: 20px;
-  background: #fff;
-  border-radius: 12px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-  text-align: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
 }
 
-/* Headerbereich */
-header.hero-header {
-  position: relative;
-  width: 100%;
-  height: 50vh;
-  background-color: #F5F1E6;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
+/* Header */
+header {
+    text-align: center;
+    padding: 50px 0;
+    background-color: #f9f9f9;
 }
 
-.hero-header .overlay {
-  width: 100%;
-  padding: 20px;
+h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3em;
+    color: #333;
 }
 
-.hero-header h1 {
-  font-size: 4rem;
-  font-weight: 700;
-  font-family: 'Playfair Display', serif;
+.date {
+    font-family: 'Petit Formal Script', cursive;
+    font-size: 2em;
+    margin-top: 20px;
+    color: #888;
 }
 
-.hochzeitsdatum {
-  font-family: 'Petit Formal Script', cursive;
-  font-size: 2.5rem;
-  color: #000;
+/* Navigation */
+nav {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: transparent;
 }
 
-/* Symbol */
-.symbol {
-  margin-bottom: 1rem;
+nav ul {
+    list-style-type: none;
+    display: flex;
+    gap: 30px;
+    padding: 0;
+    margin: 0;
 }
 
-/* Überschriften */
-h2 {
-  font-weight: 700;
-  font-size: 2rem;
-  margin-bottom: 0.5rem;
+nav ul li {
+    display: inline;
 }
 
-/* Trennlinie */
-hr {
-  border: none;
-  border-top: 2px solid #000;
-  width: 60px;
-  margin: 1.5rem auto;
+nav a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    font-size: 1.2em;
+    transition: color 0.3s ease;
 }
 
-/* RSVP-Button */
-.rsvp-button {
-  display: inline-block;
-  margin-top: 1rem;
-  padding: 12px 25px;
-  background: #000;
-  color: #fff;
-  text-decoration: none;
-  font-weight: bold;
-  border-radius: 6px;
-  transition: 0.3s;
+nav a:hover {
+    color: #ffcc00;
 }
 
-.rsvp-button:hover {
-  background: #333;
+/* Active link styling */
+nav a.active {
+    color: #ffcc00;
 }
 
-/* --- Login-Seite --- */
-.login-box {
-  width: 320px;
-  margin: 100px auto;
-  padding: 2rem;
-  text-align: center;
-  border-radius: 12px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+/* Main Content */
+.main-content {
+    margin-top: 100px;
+    text-align: center;
+    padding: 40px;
 }
 
-.login-box input {
-  width: 100%;
-  padding: 12px;
-  margin: 15px 0;
-  font-size: 16px;
-  border: 1px solid #000;
-  border-radius: 6px;
+.main-content h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5em;
+    color: #333;
 }
 
-.login-box button {
-  width: 100%;
-  padding: 12px;
-  font-weight: bold;
-  cursor: pointer;
-  border: none;
-  background: #000;
-  color: #fff;
-  border-radius: 6px;
-  transition: 0.3s;
+.main-content p {
+    font-size: 1.2em;
+    color: #666;
+    line-height: 1.6;
+    margin: 20px 0;
 }
 
-.login-box button:hover {
-  background: #333;
-}
-
-.error-msg {
-  color: red;
-  margin-top: 10px;
-  font-weight: 700;
-}
-
-/* --- RSVP Formular --- */
-.form-card {
-  text-align: left;
-}
-
-form label {
-  font-weight: 700;
-  margin-top: 10px;
-  display: block;
-}
-
-form input, form textarea {
-  width: 100%;
-  padding: 8px;
-  margin-top: 5px;
-  border: 1px solid #000;
-  border-radius: 5px;
-  font-family: 'Playfair Display', serif;
-  font-size: 1rem;
-  box-sizing: border-box;
-}
-
-form button[type="submit"] {
-  margin-top: 15px;
-  width: 100%;
-  padding: 12px 0;
-  font-weight: bold;
-  cursor: pointer;
-  background: #000;
-  color: #fff;
-  border: none;
-  border-radius: 6px;
-  transition: 0.3s;
-}
-
-form button[type="submit"]:hover {
-  background: #333;
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9em;
+    background-color: #f9f9f9;
+    margin-top: 50px;
 }
