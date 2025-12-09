@@ -1,42 +1,122 @@
-<!DOCTYPE html>
-<html lang="de">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="robots" content="noindex, nofollow">
-    <title>Unsere Hochzeit</title>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Petit+Formal+Script&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+/* Allgemeine Stileinstellungen */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: white;
+    color: black;
+}
 
-    <div class="container">
-        <!-- Header Section -->
-        <header>
-            <h1>Unsere Hochzeit</h1>
-            <div class="date">Am 20. Juni 2025</div>
-        </header>
+/* Container für den gesamten Inhalt */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
 
-        <!-- Navigation -->
-        <nav>
-            <ul>
-                <li><a href="index.html" class="active">Home</a></li>
-                <li><a href="rsvp.html">RSVP</a></li>
-            </ul>
-        </nav>
+/* Header */
+header {
+    text-align: center;
+    padding: 50px 0;
+    background-color: #f9f9f9;
+}
 
-        <!-- Main Content Section -->
-        <div class="main-content">
-            <h2>Willkommen zu unserer Hochzeit!</h2>
-            <p>Wir freuen uns, euch zu unserer Hochzeit einzuladen! Bitte bestätigt eure Teilnahme und informiert euch über die Details der Feier.</p>
-            <p>Die Feierlichkeiten beginnen um 15:00 Uhr. Wir können es kaum erwarten, diesen besonderen Tag mit euch zu teilen!</p>
-        </div>
+h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3em;
+    color: #333;
+}
 
-        <!-- Footer -->
-        <footer>
-            <p>&copy; 2025 Unsere Hochzeit | Alle Rechte vorbehalten</p>
-        </footer>
-    </div>
+.date {
+    font-family: 'Petit Formal Script', cursive;
+    font-size: 2em;
+    margin-top: 20px;
+    color: #666;
+}
 
-</body>
-</html>
+/* Navigation */
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: #fff;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Schatten hinzufügen */
+    padding: 10px 0;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+/* Aktive Navigation */
+nav a.active {
+    color: #ffcc00; /* Hervorhebung des aktiven Links */
+}
+
+/* Main Content */
+.main-content {
+    margin-top: 120px; /* Sicherstellen, dass der Inhalt unter der fixierten Navigation bleibt */
+    text-align: center;
+    padding: 40px;
+}
+
+.main-content h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5em;
+    color: #333;
+}
+
+.main-content p {
+    font-size: 1.2em;
+    color: #666;
+    line-height: 1.6;
+    margin: 20px 0;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9em;
+    background-color: #f9f9f9;
+    margin-top: 50px;
+}
+
+/* Responsive Design für kleinere Bildschirme */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .main-content {
+        padding: 20px;
+    }
+
+    .main-content h2 {
+        font-size: 2em;
+    }
+
+    .main-content p {
+        font-size: 1em;
+    }
+}
