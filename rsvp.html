@@ -3,41 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <meta name="robots" content="noindex, nofollow">
+    <title>RSVP | Hochzeit</title>
 
-    <title>RSVP</title>
-
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@300;400&display=swap" rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Petit+Formal+Script&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
     <nav>
         <ul>
             <li><a href="index.html">Home</a></li>
-            <li><a class="active" href="rsvp.html">RSVP</a></li>
+            <li><a href="rsvp.html" class="active">RSVP</a></li>
         </ul>
     </nav>
 
     <header>
         <h1>RSVP</h1>
-        <p class="date">Bitte Teilnahme bestätigen</p>
+        <div class="date">Bitte bestätigt eure Teilnahme</div>
     </header>
 
-    <section class="content">
-
+    <div class="main-content">
         <form name="rsvp" method="POST" data-netlify="true" class="rsvp-form">
-            
-            <label for="name">Name *</label>
+            <label for="name">Euer Name</label>
             <input type="text" id="name" name="name" required>
 
-            <label>Wirst du teilnehmen? *</label>
+            <label>Kommt ihr?</label>
             <div class="radio-group">
-                <label><input type="radio" name="kommt" value="Ja" required> Ja</label>
-                <label><input type="radio" name="kommt" value="Nein"> Nein</label>
+                <label><input type="radio" name="attendance" value="Ja" required> Ja</label>
+                <label><input type="radio" name="attendance" value="Nein"> Nein</label>
             </div>
 
             <label for="message">Nachricht (optional)</label>
@@ -45,11 +39,10 @@
 
             <button type="submit">Absenden</button>
         </form>
-
-    </section>
+    </div>
 
     <footer>
-        &copy; 2025 Unsere Hochzeit
+        © 2025 Unsere Hochzeit
     </footer>
 
 </body>
