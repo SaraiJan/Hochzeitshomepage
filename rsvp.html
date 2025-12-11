@@ -3,162 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <meta name="robots" content="noindex, nofollow">
-    <title>RSVP | Unsere Hochzeit</title>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Petit+Formal+Script&display=swap" rel="stylesheet">
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: 'Arial', sans-serif;
-            background-color: white;
-            color: black;
-        }
 
-        header {
-            text-align: center;
-            padding: 50px 0;
-            background-color: #f9f9f9;
-        }
+    <title>RSVP</title>
 
-        h1 {
-            font-family: 'Playfair Display', serif;
-            font-size: 3em;
-        }
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@300;400&display=swap" rel="stylesheet">
 
-        .date {
-            font-family: 'Petit Formal Script', cursive;
-            font-size: 2em;
-            margin-top: 20px;
-        }
-
-        nav {
-            position: fixed;
-            top: 20px;
-            left: 50%;
-            transform: translateX(-50%);
-            background: transparent;
-            z-index: 1000; /* Sicherstellen, dass Navigation über dem Inhalt bleibt */
-        }
-
-        nav ul {
-            list-style-type: none;
-            display: flex;
-            gap: 30px;
-        }
-
-        nav ul li {
-            display: inline;
-        }
-
-        nav a {
-            text-decoration: none;
-            color: black;
-            font-weight: bold;
-            font-size: 1.2em;
-        }
-
-        .container {
-            padding: 40px 20px;
-            text-align: center;
-        }
-
-        footer {
-            text-align: center;
-            padding: 20px;
-            font-size: 0.9em;
-            background-color: #f9f9f9;
-        }
-
-        #rsvp {
-            padding: 40px;
-            background-color: #f1f1f1;
-            margin-top: 50px;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            width: 60%;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .rsvp-form label {
-            font-size: 1.1em;
-            margin-bottom: 5px;
-        }
-
-        .rsvp-form input[type="text"],
-        .rsvp-form textarea {
-            padding: 10px;
-            font-size: 1em;
-            margin-bottom: 20px;
-            width: 100%;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
-
-        .rsvp-form input[type="radio"] {
-            margin-right: 10px;
-        }
-
-        .rsvp-form button {
-            background-color: #ffcc00;
-            color: white;
-            border: none;
-            padding: 12px;
-            font-size: 1.1em;
-            cursor: pointer;
-            border-radius: 4px;
-        }
-
-        .rsvp-form button:hover {
-            background-color: #e6b800;
-        }
-
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-<div class="container">
-    <!-- Header Section -->
-    <header>
-        <h1>RSVP</h1>
-        <div class="date">Bitte bestätigen Sie Ihre Teilnahme</div>
-    </header>
-
-    <!-- Navigation -->
     <nav>
         <ul>
             <li><a href="index.html">Home</a></li>
-            <li><a href="rsvp.html" class="active">RSVP</a></li>
+            <li><a class="active" href="rsvp.html">RSVP</a></li>
         </ul>
     </nav>
 
-    <!-- RSVP Form -->
-    <section id="rsvp">
-        <h2>RSVP Formular</h2>
-        <form name="rsvp" method="POST" data-netlify="true" action="/" class="rsvp-form">
-            <!-- Name -->
-            <label for="name">Ihr Name:</label>
-            <input type="text" id="name" name="name" placeholder="Ihr Name" required>
+    <header>
+        <h1>RSVP</h1>
+        <p class="date">Bitte Teilnahme bestätigen</p>
+    </header>
 
-            <!-- Teilnahme -->
-            <label for="attendance">Werden Sie teilnehmen?</label><br>
-            <input type="radio" id="yes" name="attendance" value="Ja" required> Ja
-            <input type="radio" id="no" name="attendance" value="Nein"> Nein
+    <section class="content">
 
-            <!-- Nachricht -->
-            <label for="message">Ihre Nachricht:</label>
-            <textarea id="message" name="message" placeholder="Besondere Wünsche oder Nachrichten" rows="4"></textarea>
+        <form name="rsvp" method="POST" data-netlify="true" class="rsvp-form">
+            
+            <label for="name">Name *</label>
+            <input type="text" id="name" name="name" required>
 
-            <button type="submit">RSVP absenden</button>
+            <label>Wirst du teilnehmen? *</label>
+            <div class="radio-group">
+                <label><input type="radio" name="kommt" value="Ja" required> Ja</label>
+                <label><input type="radio" name="kommt" value="Nein"> Nein</label>
+            </div>
+
+            <label for="message">Nachricht (optional)</label>
+            <textarea id="message" name="message" rows="4"></textarea>
+
+            <button type="submit">Absenden</button>
         </form>
+
     </section>
 
-    <!-- Footer -->
     <footer>
-        <p>&copy; 2025 Unsere Hochzeit | Alle Rechte vorbehalten</p>
+        &copy; 2025 Unsere Hochzeit
     </footer>
-</div>
 
 </body>
 </html>
