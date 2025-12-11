@@ -1,120 +1,126 @@
-/* Boho Farben */
-:root {
-    --boho-gold: #c8a46b;
-    --boho-beige: #f5f1e8;
-    --boho-sand: #e6dcc7;
-    --font-dark: #4a463f;
-}
-
-/* Allgemein */
 body {
-    margin: 0;
-    padding: 0 3cm;
-    background: white;
-    color: var(--font-dark);
-    font-family: Arial, sans-serif;
-}
-
-/* Navigation */
-.nav {
-    position: fixed;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    background: transparent;
-    padding: 15px 0;
-}
-.nav ul {
-    list-style: none;
-    display: flex;
-    gap: 40px;
-}
-.nav a {
-    text-decoration: none;
-    color: var(--font-dark);
-    font-weight: bold;
-    font-size: 1.3em;
-}
-.nav a.active {
-    color: var(--boho-gold);
+  margin: 0;
+  padding: 0 3cm; /* linker/rechter Rand 3cm */
+  font-family: 'Arial', sans-serif;
+  background-color: #fff;
+  color: #333;
+  line-height: 1.6;
 }
 
 /* Header */
-.header {
-    text-align: center;
-    padding-top: 90px;
+header {
+  text-align: center;
+  padding: 50px 0;
+  background-color: #f9f9f9;
 }
-.header h1 {
-    font-family: 'Playfair Display', serif;
-    font-size: 3.2em;
+
+header h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 3em;
+  margin: 0;
+  color: #333;
 }
-.header .date {
-    font-family: 'Petit Formal Script', cursive;
-    font-size: 2em;
-    color: var(--boho-gold);
+
+.date {
+  font-family: 'Petit Formal Script', cursive;
+  font-size: 2em;
+  margin-top: 20px;
+  color: #666;
+}
+
+/* Navigation */
+nav {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  background: transparent;
+  z-index: 100;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin: 0;
+  padding: 10px 0;
+}
+
+nav a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  font-size: 1.2em;
+  transition: color 0.3s;
+}
+
+nav a:hover,
+nav a.active {
+  color: #ffcc00;
 }
 
 /* Main Content */
 .main-content {
-    text-align: center;
-    max-width: 800px;
-    margin: 60px auto;
+  margin-top: 140px;
+  text-align: center;
 }
-.main-content h2 {
-    font-size: 2.3em;
-    font-family: 'Playfair Display';
+
+.main-content h2,
+.main-content h3 {
+  font-family: 'Playfair Display', serif;
 }
+
 .main-content p {
-    font-size: 1.2em;
+  font-size: 1.2em;
+  color: #666;
+  max-width: 800px;
+  margin: 20px auto;
 }
 
-/* Forms */
-.form-wrapper {
-    max-width: 600px;
-    margin: 40px auto;
-}
-.form label {
-    font-size: 1.1em;
-}
-.form input,
-.form textarea {
-    width: 100%;
-    margin-top: 5px;
-    padding: 12px;
-    border-radius: 6px;
-    border: 1px solid #bbb;
-}
-.form button {
-    margin-top: 15px;
-    padding: 15px;
-    background: var(--boho-gold);
-    color: white;
-    font-size: 1.2em;
-    border: none;
-    border-radius: 6px;
+/* RSVP Form */
+.rsvp-form {
+  max-width: 600px;
+  margin: 20px auto;
+  text-align: left;
 }
 
-/* Login Seite */
-.login-body {
-    background: var(--boho-beige);
+.rsvp-form input[type="text"],
+.rsvp-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
 }
-.login-box {
-    margin: 150px auto;
-    max-width: 400px;
-    background: white;
-    padding: 40px;
-    border-radius: 10px;
-    text-align: center;
+
+.rsvp-form button {
+  padding: 12px;
+  background-color: #ffcc00;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
 }
-.login-title {
-    font-family: 'Playfair Display';
-    font-size: 2.5em;
+
+.rsvp-form button:hover {
+  background-color: #e6b800;
 }
-.login-sub {
-    color: var(--font-dark);
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #f9f9f9;
+  margin-top: 50px;
 }
-.login-hint {
-    margin-top: 20px;
-    font-size: .9em;
-    color: #777;
+
+/* Responsive */
+@media(max-width: 768px){
+  body {padding: 0 1cm;}
+  nav ul {flex-direction: column; gap: 15px;}
+  .main-content h2 {font-size: 2em;}
+  .main-content p {font-size: 1em;}
 }
