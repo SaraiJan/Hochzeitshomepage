@@ -1,36 +1,90 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="robots" content="noindex, nofollow">
-    <title>Unsere Hochzeit</title>
-
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Petit+Formal+Script&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Unsere Hochzeit</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Petit+Formal+Script&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<nav class="nav">
-    <ul>
+  <div class="container">
+    <!-- Header -->
+    <header>
+      <h1>Unsere Hochzeit</h1>
+      <div class="date">Am 20. Juni 2025</div>
+    </header>
+
+    <!-- Navigation -->
+    <nav>
+      <ul>
         <li><a href="index.html" class="active">Home</a></li>
         <li><a href="rsvp.html">RSVP</a></li>
-    </ul>
-</nav>
+      </ul>
+    </nav>
 
-<header class="header">
-    <h1>Unsere Hochzeit</h1>
-    <div class="date">Am 20. Juni 2025</div>
-</header>
+    <!-- Main Content -->
+    <div class="main-content">
+      <h2>Willkommen zu unserer Hochzeit</h2>
+      <p>Wir freuen uns, euch zu unserer Hochzeit einzuladen! Bitte bestätigt eure Teilnahme und informiert euch über die Details der Feier.</p>
 
-<section class="main-content">
-    <h2>Willkommen zur Feier unserer Liebe</h2>
-    <p>Wir freuen uns darauf, diesen besonderen Tag mit euch zu teilen.</p>
-</section>
+      <!-- Countdown -->
+      <div id="countdown">
+        <h3>Noch <span id="days">0</span> Tage bis zu unserem großen Tag!</h3>
+      </div>
 
-<footer>
-    © 2025 Unsere Hochzeit – Alles Liebe
-</footer>
+      <!-- Tagesablauf -->
+      <section id="timeline">
+        <h3>Tagesablauf / Timeline</h3>
+        <ul>
+          <li><strong>15:00</strong> – Freie Trauung</li>
+          <li><strong>16:00</strong> – Sektempfang</li>
+          <li><strong>18:00</strong> – Abendessen</li>
+          <li><strong>20:00</strong> – Tanz</li>
+          <li><strong>00:00</strong> – Mitternachtssnack</li>
+        </ul>
+      </section>
+
+      <!-- Anfahrt -->
+      <section id="location">
+        <h3>Unsere Hochzeitsorte</h3>
+        <p>Bad Neustadt & Strahlungen</p>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d..." width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+      </section>
+
+      <!-- Mehrsprachig Hinweis -->
+      <section id="languages">
+        <h3>Sprachen / Languages / Jezici</h3>
+        <p>Deutsch | English | Hrvatski</p>
+      </section>
+
+      <!-- Einladungstext -->
+      <section id="invitation">
+        <h3>Einladung / Invitation / Poziv</h3>
+        <p>Wir sagen Ja zueinander und möchten diesen besonderen Tag mit euch feiern! Kommt und erlebt Liebe, Freude und unvergessliche Momente mit uns.</p>
+      </section>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+      <p>&copy; 2025 Unsere Hochzeit | Alle Rechte vorbehalten</p>
+    </footer>
+  </div>
+
+  <!-- Countdown Script -->
+  <script>
+    const countDownDate = new Date("June 20, 2025 15:00:00").getTime();
+    const daysEl = document.getElementById("days");
+
+    setInterval(function() {
+      const now = new Date().getTime();
+      const distance = countDownDate - now;
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      daysEl.innerText = days >= 0 ? days : 0;
+    }, 1000);
+  </script>
 
 </body>
 </html>
