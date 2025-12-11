@@ -3,36 +3,90 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="robots" content="noindex, nofollow">
-    <title>Zugang | Hochzeit</title>
+    <title>Login | Unsere Hochzeit</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Petit+Formal+Script&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-</head>
-<body class="login-body">
-
-<div class="login-box">
-    <h1 class="login-title">Willkommen</h1>
-    <p class="login-sub">Bitte Passwort eingeben</p>
-
-    <form id="loginForm">
-        <input type="password" id="password" placeholder="Passwort" required>
-        <button type="submit">Weiter</button>
-    </form>
-
-    <p class="login-hint">Passwort ist in eurer Einladung 🌿</p>
-</div>
-
-<script>
-    document.getElementById("loginForm").addEventListener("submit", function(e) {
-        e.preventDefault();
-        const pw = document.getElementById("password").value;
-
-        if (pw === "hochzeit2025") { 
-            window.location.href = "index.html";
-        } else {
-            alert("Falsches Passwort 🙈");
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #fff;
+            font-family: 'Arial', sans-serif;
         }
-    });
-</script>
 
+        .login-box {
+            text-align: center;
+            padding: 40px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            background-color: #f9f9f9;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            width: 300px;
+        }
+
+        .login-box h1 {
+            font-family: 'Playfair Display', serif;
+            margin-bottom: 20px;
+        }
+
+        .login-box p {
+            font-family: 'Petit Formal Script', cursive;
+            margin-bottom: 30px;
+            font-size: 1.2em;
+        }
+
+        .login-box form input[type="text"],
+        .login-box form input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            font-size: 1em;
+        }
+
+        .login-box form button {
+            width: 100%;
+            padding: 12px;
+            background-color: #ffcc00;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.1em;
+            cursor: pointer;
+        }
+
+        .login-box form button:hover {
+            background-color: #e6b800;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-box">
+        <h1>Unsere Hochzeit</h1>
+        <p>Bitte meldet euch an</p>
+        <form onsubmit="checkLogin(event)">
+            <input type="text" id="username" placeholder="Benutzername" required>
+            <input type="password" id="password" placeholder="Passwort" required>
+            <button type="submit">Login</button>
+        </form>
+    </div>
+
+    <script>
+        function checkLogin(event) {
+            event.preventDefault();
+            const user = document.getElementById('username').value;
+            const pass = document.getElementById('password').value;
+
+            // Hier Benutzername/Passwort anpassen
+            if(user === 'gast' && pass === 'hochzeit2025') {
+                window.location.href = 'index.html';
+            } else {
+                alert('Falscher Benutzername oder Passwort');
+            }
+        }
+    </script>
 </body>
 </html>
