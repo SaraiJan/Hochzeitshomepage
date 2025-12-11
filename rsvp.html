@@ -1,50 +1,51 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="robots" content="noindex, nofollow">
-    <title>RSVP | Hochzeit</title>
-
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Petit+Formal+Script&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <title>RSVP | Unsere Hochzeit</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Petit+Formal+Script&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<nav class="nav">
-    <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="rsvp.html" class="active">RSVP</a></li>
-    </ul>
-</nav>
-
-<header class="header">
+<div class="container">
+  <header>
     <h1>RSVP</h1>
     <div class="date">Bitte bestätigt eure Teilnahme</div>
-</header>
+  </header>
 
-<section class="main-content form-wrapper">
-    <form name="rsvp" method="POST" data-netlify="true" class="form">
-        
-        <label for="name">Name</label>
-        <input type="text" name="name" id="name" required>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="rsvp.html" class="active">RSVP</a></li>
+    </ul>
+  </nav>
 
-        <label>Kommt ihr?</label>
-        <div class="radio-group">
-            <label><input type="radio" name="attendance" value="Ja" required> Ja</label>
-            <label><input type="radio" name="attendance" value="Nein"> Nein</label>
-        </div>
+  <div class="main-content">
+    <section id="rsvp">
+      <h2>RSVP Formular</h2>
+      <form name="rsvp" method="POST" data-netlify="true" class="rsvp-form">
+        <label for="name">Ihr Name:</label>
+        <input type="text" id="name" name="name" placeholder="Ihr Name" required>
 
-        <label for="msg">Nachricht</label>
-        <textarea id="msg" name="message" rows="4"></textarea>
+        <label>Werden Sie teilnehmen?</label>
+        <input type="radio" id="yes" name="attendance" value="Ja" required> Ja
+        <input type="radio" id="no" name="attendance" value="Nein"> Nein
 
-        <button type="submit">Absenden</button>
-    </form>
-</section>
+        <label for="message">Ihre Nachricht:</label>
+        <textarea id="message" name="message" placeholder="Besondere Wünsche oder Nachrichten" rows="4"></textarea>
 
-<footer>
-    © 2025 Unsere Hochzeit
-</footer>
+        <button type="submit">RSVP absenden</button>
+      </form>
+    </section>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Unsere Hochzeit | Alle Rechte vorbehalten</p>
+  </footer>
+</div>
 
 </body>
 </html>
