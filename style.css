@@ -1,88 +1,120 @@
+/* Boho Farben */
+:root {
+    --boho-gold: #c8a46b;
+    --boho-beige: #f5f1e8;
+    --boho-sand: #e6dcc7;
+    --font-dark: #4a463f;
+}
+
+/* Allgemein */
 body {
     margin: 0;
     padding: 0 3cm;
-    font-family: Arial, sans-serif;
     background: white;
-    color: #333;
+    color: var(--font-dark);
+    font-family: Arial, sans-serif;
 }
 
-nav {
+/* Navigation */
+.nav {
     position: fixed;
     top: 0;
     left: 50%;
     transform: translateX(-50%);
-    width: 100%;
-    padding: 15px 0;
     background: transparent;
+    padding: 15px 0;
 }
-
-nav ul {
+.nav ul {
     list-style: none;
     display: flex;
-    gap: 30px;
-    justify-content: center;
-    padding: 0;
+    gap: 40px;
 }
-
-nav a {
+.nav a {
     text-decoration: none;
-    color: #333;
-    font-size: 1.2em;
+    color: var(--font-dark);
     font-weight: bold;
+    font-size: 1.3em;
+}
+.nav a.active {
+    color: var(--boho-gold);
 }
 
-nav a.active {
-    color: #c7a200;
-}
-
-header {
+/* Header */
+.header {
     text-align: center;
-    margin-top: 80px;
-    padding: 50px 0;
+    padding-top: 90px;
 }
-
-h1 {
+.header h1 {
     font-family: 'Playfair Display', serif;
-    font-size: 3em;
+    font-size: 3.2em;
 }
-
-.date {
+.header .date {
     font-family: 'Petit Formal Script', cursive;
     font-size: 2em;
-    color: #777;
+    color: var(--boho-gold);
 }
 
+/* Main Content */
 .main-content {
     text-align: center;
     max-width: 800px;
-    margin: 50px auto;
+    margin: 60px auto;
 }
-
-.rsvp-form {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+.main-content h2 {
+    font-size: 2.3em;
+    font-family: 'Playfair Display';
 }
-
-input, textarea {
-    padding: 10px;
-    font-size: 1em;
-    border: 1px solid #bbb;
-    border-radius: 5px;
-}
-
-button {
-    padding: 12px;
+.main-content p {
     font-size: 1.2em;
-    background: #c7a200;
-    color: white;
-    border: none;
-    border-radius: 5px;
 }
 
-footer {
-    margin-top: 100px;
+/* Forms */
+.form-wrapper {
+    max-width: 600px;
+    margin: 40px auto;
+}
+.form label {
+    font-size: 1.1em;
+}
+.form input,
+.form textarea {
+    width: 100%;
+    margin-top: 5px;
+    padding: 12px;
+    border-radius: 6px;
+    border: 1px solid #bbb;
+}
+.form button {
+    margin-top: 15px;
+    padding: 15px;
+    background: var(--boho-gold);
+    color: white;
+    font-size: 1.2em;
+    border: none;
+    border-radius: 6px;
+}
+
+/* Login Seite */
+.login-body {
+    background: var(--boho-beige);
+}
+.login-box {
+    margin: 150px auto;
+    max-width: 400px;
+    background: white;
+    padding: 40px;
+    border-radius: 10px;
     text-align: center;
-    padding: 20px;
+}
+.login-title {
+    font-family: 'Playfair Display';
+    font-size: 2.5em;
+}
+.login-sub {
+    color: var(--font-dark);
+}
+.login-hint {
+    margin-top: 20px;
+    font-size: .9em;
     color: #777;
 }
