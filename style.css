@@ -1,133 +1,117 @@
-/* Allgemeine Stileinstellungen */
+/* Layout */
 body {
     margin: 0;
-    padding: 0;
-    font-family: 'Arial', sans-serif;
-    background-color: #fff;
+    font-family: "Inter", sans-serif;
+    background: white;
     color: #333;
-    line-height: 1.6;
-    padding-left: 3%;  /* Relativer Abstand für flexiblere Darstellung */
-    padding-right: 3%; /* Relativer Abstand für flexiblere Darstellung */
+}
+
+/* Gelbe Seitenränder links/rechts */
+body::before,
+body::after {
+    content: "";
+    position: fixed;
+    top: 0;
+    width: 3cm;
+    height: 100%;
+    background: #fff9c4; /* sehr helles Gelb */
+    z-index: -1;
+}
+body::before { left: 0; }
+body::after { right: 0; }
+
+/* Navigation */
+nav {
+    text-align: center;
+    padding: 20px 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: inline-flex;
+    gap: 40px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #444;
+    font-weight: bold;
+}
+
+nav a.active {
+    color: #cfa400;
 }
 
 /* Header */
 header {
     text-align: center;
-    padding: 60px 0; /* Etwas mehr Platz oben und unten für bessere visuelle Wirkung */
-    background-color: #f9f9f9;
+    padding: 60px 20px;
 }
 
-header h1 {
-    font-family: 'Playfair Display', serif;
-    font-size: 3.2em; /* Größere Schrift für die Überschrift */
+h1 {
+    font-family: "Playfair Display", serif;
+    font-size: 3rem;
     margin: 0;
-    color: #333;
 }
 
 .date {
-    font-family: 'Petit Formal Script', cursive;
-    font-size: 2.2em;
-    margin-top: 20px;
+    font-size: 1.4rem;
     color: #666;
+    margin-top: 10px;
 }
 
-/* Navigation */
-nav {
-    position: fixed;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: transparent;
-    z-index: 100;
-    width: 100%;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+/* Content */
+.content {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+    font-size: 1.2rem;
 }
 
-nav ul {
-    list-style-type: none;
+/* Formular */
+form {
+    max-width: 400px;
+    margin: 40px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+input, textarea {
+    padding: 12px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+}
+
+.radio-group {
     display: flex;
     justify-content: center;
     gap: 30px;
-    padding: 10px 0;
-    margin: 0;
+    margin-bottom: 10px;
 }
 
-nav ul li {
-    display: inline;
-}
-
-nav a {
-    text-decoration: none;
-    color: #333;
+button {
+    padding: 12px;
+    background: #ffcc00;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
     font-weight: bold;
-    font-size: 1.2em;
-    transition: color 0.3s ease;
+    cursor: pointer;
 }
 
-nav a:hover {
-    color: #ffcc00;
-}
-
-nav a.active {
-    color: #ffcc00; /* Highlight active link */
-}
-
-/* Container (main content) */
-.container {
-    padding: 40px 20px;
-    text-align: center;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-/* Main content */
-.main-content {
-    margin-top: 150px; /* Platz für fixe Navigation */
-}
-
-.main-content h2 {
-    font-family: 'Playfair Display', serif;
-    font-size: 2.8em; /* Etwas größere Schrift für bessere Lesbarkeit */
-    color: #333;
-    margin-bottom: 20px; /* Abstand nach der Überschrift */
-}
-
-.main-content p {
-    font-size: 1.2em;
-    color: #666;
-    max-width: 800px;
-    margin: 20px auto;
+button:hover {
+    background: #e6b800;
 }
 
 /* Footer */
 footer {
     text-align: center;
-    padding: 20px;
-    font-size: 1em;
-    background-color: #f9f9f9;
-    margin-top: 50px;
-}
-
-/* Responsives Design */
-@media (max-width: 768px) {
-    nav ul {
-        flex-direction: column;
-        gap: 15px;
-    }
-
-    .main-content h2 {
-        font-size: 2.2em; /* Kleinere Schrift auf mobilen Geräten */
-    }
-
-    .main-content p {
-        font-size: 1em; /* Kleinere Schrift für bessere Lesbarkeit auf kleinen Bildschirmen */
-    }
-
-    footer {
-        padding: 15px;
-    }
-
-    nav {
-        box-shadow: none; /* Schatten auf kleineren Bildschirmen entfernen */
-    }
+    padding: 30px;
+    font-size: 0.9rem;
+    color: #777;
 }
