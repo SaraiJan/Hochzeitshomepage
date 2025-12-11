@@ -1,117 +1,88 @@
-/* Layout */
 body {
     margin: 0;
-    font-family: "Inter", sans-serif;
+    padding: 0 3cm;
+    font-family: Arial, sans-serif;
     background: white;
     color: #333;
 }
 
-/* Gelbe Seitenränder links/rechts */
-body::before,
-body::after {
-    content: "";
+nav {
     position: fixed;
     top: 0;
-    width: 3cm;
-    height: 100%;
-    background: #fff9c4; /* sehr helles Gelb */
-    z-index: -1;
-}
-body::before { left: 0; }
-body::after { right: 0; }
-
-/* Navigation */
-nav {
-    text-align: center;
-    padding: 20px 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    padding: 15px 0;
+    background: transparent;
 }
 
 nav ul {
     list-style: none;
+    display: flex;
+    gap: 30px;
+    justify-content: center;
     padding: 0;
-    margin: 0;
-    display: inline-flex;
-    gap: 40px;
 }
 
 nav a {
     text-decoration: none;
-    color: #444;
+    color: #333;
+    font-size: 1.2em;
     font-weight: bold;
 }
 
 nav a.active {
-    color: #cfa400;
+    color: #c7a200;
 }
 
-/* Header */
 header {
     text-align: center;
-    padding: 60px 20px;
+    margin-top: 80px;
+    padding: 50px 0;
 }
 
 h1 {
-    font-family: "Playfair Display", serif;
-    font-size: 3rem;
-    margin: 0;
+    font-family: 'Playfair Display', serif;
+    font-size: 3em;
 }
 
 .date {
-    font-size: 1.4rem;
-    color: #666;
-    margin-top: 10px;
+    font-family: 'Petit Formal Script', cursive;
+    font-size: 2em;
+    color: #777;
 }
 
-/* Content */
-.content {
-    max-width: 700px;
-    margin: 0 auto;
-    padding: 20px;
+.main-content {
     text-align: center;
-    font-size: 1.2rem;
+    max-width: 800px;
+    margin: 50px auto;
 }
 
-/* Formular */
-form {
-    max-width: 400px;
-    margin: 40px auto;
+.rsvp-form {
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 20px;
 }
 
 input, textarea {
-    padding: 12px;
-    border-radius: 6px;
-    border: 1px solid #ccc;
-    font-size: 1rem;
-}
-
-.radio-group {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    margin-bottom: 10px;
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #bbb;
+    border-radius: 5px;
 }
 
 button {
     padding: 12px;
-    background: #ffcc00;
+    font-size: 1.2em;
+    background: #c7a200;
+    color: white;
     border: none;
-    border-radius: 6px;
-    font-size: 1rem;
-    font-weight: bold;
-    cursor: pointer;
+    border-radius: 5px;
 }
 
-button:hover {
-    background: #e6b800;
-}
-
-/* Footer */
 footer {
+    margin-top: 100px;
     text-align: center;
-    padding: 30px;
-    font-size: 0.9rem;
+    padding: 20px;
     color: #777;
 }
